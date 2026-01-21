@@ -1,0 +1,632 @@
+/* ============================================
+   CSS Reset & Base Styles
+   ============================================ */
+
+/* Simple CSS reset to ensure consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base typography and body styles */
+/* Warm, coffee-inspired base: cream background with espresso text */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.65;
+    color: #3d3a35; /* Warm dark brown, not pure black */
+    background-color: #faf8f5; /* Warm cream background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================
+   Container & Layout
+   ============================================ */
+
+/* Container centers content and sets max width */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Main content area takes up remaining space */
+.main {
+    flex: 1;
+}
+
+/* ============================================
+   Header & Navigation
+   ============================================ */
+
+/* Warm accent color: latte/crema inspired - used sparingly for premium touches */
+:root {
+    --accent-latte: #c4a574; /* Warm latte/crema tone */
+    --accent-latte-hover: #b8956a; /* Deeper latte */
+    --accent-latte-light: #e8ddd0; /* Light latte for backgrounds */
+}
+
+.header {
+    background-color: #faf8f5; /* Soft warm cream, frames the site */
+    border-bottom: 1px solid #e8e4dd; /* Warm sand border */
+    padding: 1.5rem 0; /* More breathing room */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02); /* Very subtle shadow */
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Logo styling - warm and welcoming, with subtle accent underline */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #3d3a35; /* Warm espresso */
+    text-decoration: none;
+    transition: all 0.2s ease;
+    letter-spacing: -0.015em;
+    position: relative;
+    padding-bottom: 0.25rem;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-latte);
+    transition: width 0.3s ease;
+}
+
+.logo:hover {
+    color: #4a3f35;
+}
+
+.logo:hover::after {
+    width: 100%;
+}
+
+/* Navigation links */
+.nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav-link {
+    color: #6b6459; /* Warm medium brown */
+    text-decoration: none;
+    font-size: 0.9375rem;
+    transition: all 0.25s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 400;
+}
+
+.nav-link:hover {
+    color: #4a3f35;
+    background-color: #f5f2ed; /* Soft oat background */
+}
+
+.nav-link.active {
+    color: #3d3a35;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+/* Premium navigation pills for primary paths - intentional and refined */
+.nav-link.primary-path {
+    background-color: var(--accent-latte-light); /* Light latte background */
+    color: #4a3f35; /* Warm espresso */
+    font-weight: 500;
+    padding: 0.625rem 1.5rem;
+    border-radius: 20px; /* More pill-shaped, premium feel */
+    border: 1px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.nav-link.primary-path:hover {
+    background-color: var(--accent-latte); /* Warm accent on hover */
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(196, 165, 116, 0.2);
+}
+
+.nav-link.primary-path.active {
+    background-color: var(--accent-latte); /* Warm accent color */
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(196, 165, 116, 0.15);
+}
+
+/* ============================================
+   Hero Section (Home Page)
+   ============================================ */
+
+.hero {
+    padding: 6rem 0 7rem; /* More generous spacing */
+    text-align: center;
+    /* Soft warm gradient - like morning light in a café */
+    background: linear-gradient(to bottom, #fefcf9 0%, #faf8f5 50%, #f7f5f1 100%);
+}
+
+.hero-headline {
+    font-size: 3rem; /* Larger, more editorial */
+    font-weight: 600;
+    color: #3d3a35; /* Warm espresso */
+    margin-bottom: 1.75rem;
+    line-height: 1.25; /* Tighter for impact */
+    letter-spacing: -0.02em; /* Editorial feel */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-subheadline {
+    font-size: 1.25rem;
+    color: #5d574d; /* Warm medium brown */
+    max-width: 700px;
+    margin: 0 auto 5rem; /* More space before pathways */
+    line-height: 1.7;
+    font-weight: 400;
+    letter-spacing: -0.005em;
+}
+
+/* ============================================
+   Pathway Cards (Homepage - "Doors" into Community)
+   ============================================ */
+
+/* Two clear entry paths - symmetrically aligned, feeling like invitations */
+.pathway-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem; /* More space between cards */
+    max-width: 1000px; /* Wider for better symmetry */
+    margin: 0 auto;
+}
+
+.pathway-card {
+    display: block;
+    padding: 3rem 2.5rem; /* More generous padding */
+    background-color: #ffffff; /* Clean white on warm background */
+    border: 1px solid #e8e4dd; /* Subtle border, not harsh */
+    border-radius: 24px; /* Very rounded, premium feel */
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03); /* Very soft shadow */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle accent indicator on hover */
+.pathway-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--accent-latte);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.pathway-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06); /* Elevated, soft shadow */
+    border-color: var(--accent-latte-light);
+}
+
+.pathway-card:hover::before {
+    transform: scaleY(1);
+}
+
+/* Subtle background variations for visual distinction */
+.pathway-card-cafe {
+    background: linear-gradient(135deg, #ffffff 0%, #fefcf9 100%);
+}
+
+.pathway-card-lover {
+    background: linear-gradient(135deg, #ffffff 0%, #fefcf9 100%);
+}
+
+.pathway-title {
+    font-size: 1.625rem; /* Slightly larger */
+    font-weight: 600;
+    color: #3d3a35; /* Warm espresso */
+    margin-bottom: 0.875rem;
+    letter-spacing: -0.015em;
+}
+
+.pathway-description {
+    font-size: 1.0625rem; /* Slightly larger for readability */
+    color: #5d574d; /* Warm medium brown */
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 12px; /* More rounded, friendlier */
+    transition: all 0.25s ease; /* Gentler transitions */
+    cursor: pointer;
+    border: none;
+    letter-spacing: -0.01em;
+}
+
+/* Primary buttons: warm accent color - used sparingly for key actions */
+.btn-primary {
+    background-color: var(--accent-latte); /* Warm latte accent */
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(196, 165, 116, 0.2); /* Soft warm shadow */
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-latte-hover); /* Deeper latte */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(196, 165, 116, 0.3);
+}
+
+/* Secondary buttons: supportive, not equal weight */
+.btn-secondary {
+    background-color: transparent;
+    color: #5d574d; /* Warm medium brown */
+    border: 1px solid #ddd8d0; /* Subtle border */
+    box-shadow: none;
+    font-weight: 400;
+}
+
+.btn-secondary:hover {
+    background-color: #f7f5f1; /* Soft oat background */
+    border-color: #d4c9b8;
+    color: #4a3f35;
+    transform: translateY(-1px);
+}
+
+/* ============================================
+   Page Sections (All Pages Except Home)
+   ============================================ */
+
+.page-section {
+    padding: 5rem 0; /* More breathing room */
+}
+
+.page-heading {
+    font-size: 2.75rem; /* Larger, more editorial */
+    font-weight: 600;
+    color: #3d3a35; /* Warm espresso */
+    margin-bottom: 3.5rem; /* More space */
+    text-align: center;
+    letter-spacing: -0.02em; /* Editorial feel */
+    line-height: 1.2;
+}
+
+.content-block {
+    margin-bottom: 5rem; /* Increased spacing between sections */
+}
+
+/* Add subtle warm background to video and form sections - like a cozy café corner */
+.content-block:has(.video-wrapper),
+.content-block:has(.video-coming-soon),
+.content-block:has(.form-wrapper) {
+    background-color: #f7f5f1; /* Warm oat background */
+    padding: 2.5rem;
+    border-radius: 16px; /* More rounded, softer */
+    margin: 3rem 0;
+    border: 1px solid #e8e4dd; /* Subtle warm border */
+}
+
+.lead-text {
+    font-size: 1.25rem;
+    color: #5d574d; /* Warm medium brown */
+    margin-bottom: 1.5rem;
+    line-height: 1.75; /* More comfortable */
+    font-weight: 400;
+    max-width: 800px;
+}
+
+.content-block p:not(.lead-text) {
+    color: #5d574d; /* Warm medium brown */
+    line-height: 1.75; /* More comfortable reading */
+    margin-bottom: 1rem;
+    max-width: 800px;
+}
+
+.section-heading {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #4a3f35; /* Warm espresso */
+    margin-bottom: 1.75rem; /* More space below headings */
+    margin-top: 3rem; /* More space above headings */
+    letter-spacing: -0.01em;
+}
+
+/* ============================================
+   Video Embeds
+   ============================================ */
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px; /* More rounded, softer */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); /* Softer, more spread shadow */
+    margin-bottom: 2rem;
+    background-color: #f4f2ed; /* Warm oat background */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Coming soon placeholder for video section */
+.video-coming-soon {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: #faf8f5; /* Slightly lighter than parent background */
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #e8e4dd; /* Subtle warm border */
+}
+
+.coming-soon-text {
+    font-size: 1.125rem;
+    color: #8b8579; /* Warm muted brown */
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* ============================================
+   Form Embeds
+   ============================================ */
+
+.form-intro {
+    margin-bottom: 1.5rem;
+    color: #5d574d; /* Warm medium brown */
+    font-size: 1.05rem;
+}
+
+.form-wrapper {
+    width: 100%;
+    border-radius: 16px; /* More rounded */
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); /* Softer shadow */
+    background-color: #fefcf9; /* Soft off-white */
+    border: 1px solid #e8e4dd; /* Subtle warm border */
+}
+
+.form-wrapper iframe {
+    display: block;
+    width: 100%;
+    border: none;
+}
+
+/* ============================================
+   Contact Page
+   ============================================ */
+
+.contact-info {
+    margin: 2.5rem 0;
+    padding: 2.5rem;
+    background-color: #f5f1eb; /* Warm latte background */
+    border-radius: 16px; /* More rounded, friendlier */
+    border: 1px solid #e4d9c4; /* Warm sand border */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04); /* Very soft shadow */
+}
+
+.contact-info p {
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+    color: #4a3f35; /* Warm espresso */
+}
+
+.contact-info a {
+    color: #4a3f35; /* Warm espresso */
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1.5px solid var(--accent-latte); /* Warm accent underline */
+    transition: all 0.2s ease;
+}
+
+.contact-info a:hover {
+    color: var(--accent-latte-hover);
+    border-bottom-color: var(--accent-latte-hover);
+}
+
+.note {
+    font-size: 0.9rem;
+    color: #8b8579; /* Warm muted brown */
+    font-style: italic;
+    margin-top: 0.75rem;
+}
+
+/* ============================================
+   Privacy Page
+   ============================================ */
+
+.privacy-notice {
+    background-color: #f5f1eb; /* Warm latte, not harsh yellow */
+    border: 1px solid #d4c4a8; /* Soft caramel border */
+    border-radius: 12px; /* More rounded */
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03); /* Very soft shadow */
+}
+
+.privacy-notice p {
+    margin-bottom: 0.5rem;
+}
+
+.last-updated {
+    margin-top: 2rem;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.footer {
+    background-color: #f7f5f1; /* Warm oat background */
+    border-top: 1px solid #e8e4dd; /* Warm sand border */
+    padding: 2.5rem 0;
+    margin-top: 5rem;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #6b6459; /* Warm medium brown */
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #4a3f35; /* Warmer espresso on hover */
+}
+
+.footer-copyright {
+    color: #8b8579; /* Warm muted brown */
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
+
+/* ============================================
+   Responsive Design (Mobile-First)
+   ============================================ */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 0 5rem;
+    }
+
+    .hero-headline {
+        font-size: 2.25rem;
+        line-height: 1.3;
+    }
+
+    .hero-subheadline {
+        font-size: 1.125rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .page-heading {
+        font-size: 2rem;
+    }
+
+    .nav-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Pathway cards stack on mobile */
+    .pathway-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 100%;
+    }
+
+    .pathway-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .pathway-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .hero {
+        padding: 2.5rem 0;
+    }
+
+    .hero-headline {
+        font-size: 1.75rem;
+    }
+
+    .hero-subheadline {
+        font-size: 1rem;
+    }
+
+    .page-section {
+        padding: 2rem 0;
+    }
+
+    .page-heading {
+        font-size: 1.5rem;
+    }
+
+    .section-heading {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+}
