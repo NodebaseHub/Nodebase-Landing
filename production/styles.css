@@ -1,0 +1,651 @@
+/* ============================================
+   CSS Reset & Base Styles
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================
+   Design System Variables
+   ============================================ */
+
+:root {
+    /* Tech-forward accent: warm vanilla/espresso tone */
+    --accent-primary: #f5a623; /* Warm vanilla gold */
+    --accent-primary-hover: #e0941a; /* Deeper gold */
+    --accent-primary-light: #fef5e7; /* Light vanilla background */
+    
+    /* Typography */
+    --text-primary: #1a1a1a; /* High contrast, not pure black */
+    --text-secondary: #4a4a4a;
+    --text-muted: #6b6b6b;
+    
+    /* Backgrounds */
+    --bg-primary: #fefefe; /* Off-white with subtle warmth */
+    --bg-secondary: #f8f7f5; /* Soft beige */
+    --bg-tertiary: #f5f4f2; /* Warmer beige */
+    
+    /* Borders & Shadows */
+    --border-color: #e5e3e0;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================================
+   Base Typography & Body
+   ============================================ */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Container & Layout
+   ============================================ */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+}
+
+.main {
+    flex: 1;
+}
+
+/* ============================================
+   Header & Navigation - Tech-Forward Structure
+   ============================================ */
+
+.header {
+    background-color: var(--bg-primary);
+    border-bottom: 2px solid var(--border-color);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background-color: rgba(254, 254, 254, 0.95);
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Logo - Bold and confident */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    letter-spacing: -0.02em;
+}
+
+.logo:hover {
+    color: var(--accent-primary);
+}
+
+/* Navigation - Structured and prominent */
+.nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    padding: 0.625rem 1.25rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+}
+
+.nav-link.active {
+    color: var(--text-primary);
+    font-weight: 600;
+    background-color: transparent;
+}
+
+/* Primary paths - Prominent blocks/cards */
+.nav-link.primary-path {
+    background-color: var(--accent-primary-light);
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--accent-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-link.primary-path:hover {
+    background-color: var(--accent-primary);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.nav-link.primary-path.active {
+    background-color: var(--accent-primary);
+    color: #ffffff;
+    box-shadow: var(--shadow-md);
+}
+
+/* ============================================
+   Hero Section - Strong Presence
+   ============================================ */
+
+.hero {
+    padding: 8rem 0 9rem;
+    text-align: center;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-headline {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-subheadline {
+    font-size: 1.375rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 5rem;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+/* ============================================
+   Pathway Cards - Clear Entry Blocks
+   ============================================ */
+
+.pathway-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pathway-card {
+    display: block;
+    padding: 3.5rem 3rem;
+    background-color: #ffffff;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.pathway-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.pathway-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-primary);
+}
+
+.pathway-card:hover::before {
+    transform: scaleX(1);
+}
+
+.pathway-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.pathway-description {
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+    letter-spacing: -0.01em;
+}
+
+.btn-primary {
+    background-color: var(--accent-primary);
+    color: #ffffff;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-secondary);
+    border: 2px solid var(--border-color);
+    box-shadow: none;
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-secondary);
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+}
+
+/* ============================================
+   Page Sections
+   ============================================ */
+
+.page-section {
+    padding: 6rem 0;
+    background-color: var(--bg-primary);
+}
+
+.page-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4rem;
+    text-align: center;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+}
+
+.content-block {
+    margin-bottom: 6rem;
+}
+
+/* Content blocks with video/form get structured background */
+.content-block:has(.video-wrapper),
+.content-block:has(.video-coming-soon),
+.content-block:has(.form-wrapper) {
+    background-color: var(--bg-secondary);
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 4rem 0;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.lead-text {
+    font-size: 1.375rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    font-weight: 400;
+    max-width: 800px;
+}
+
+.content-block p:not(.lead-text) {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    max-width: 800px;
+}
+
+.section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    letter-spacing: -0.02em;
+}
+
+/* ============================================
+   Video Embeds
+   ============================================ */
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2rem;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-coming-soon {
+    width: 100%;
+    padding: 5rem 2rem;
+    background-color: var(--bg-primary);
+    border-radius: 12px;
+    text-align: center;
+    border: 2px dashed var(--border-color);
+}
+
+.coming-soon-text {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* ============================================
+   Form Embeds
+   ============================================ */
+
+.form-intro {
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+}
+
+.form-wrapper {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+}
+
+.form-wrapper iframe {
+    display: block;
+    width: 100%;
+    border: none;
+}
+
+/* ============================================
+   Contact Page
+   ============================================ */
+
+.contact-info {
+    margin: 3rem 0;
+    padding: 3rem;
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.contact-info p {
+    margin-bottom: 0.75rem;
+    font-size: 1.125rem;
+    color: var(--text-primary);
+}
+
+.contact-info a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid var(--accent-primary);
+    transition: all 0.2s ease;
+}
+
+.contact-info a:hover {
+    color: var(--accent-primary);
+    border-bottom-color: var(--accent-primary-hover);
+}
+
+.note {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* ============================================
+   Privacy Page
+   ============================================ */
+
+.privacy-notice {
+    background-color: var(--accent-primary-light);
+    border: 1px solid var(--accent-primary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.privacy-notice p {
+    margin-bottom: 0.5rem;
+}
+
+.last-updated {
+    margin-top: 2rem;
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+}
+
+/* ============================================
+   Footer - Deliberate Structure
+   ============================================ */
+
+.footer {
+    background-color: var(--bg-secondary);
+    border-top: 2px solid var(--border-color);
+    padding: 3.5rem 0;
+    margin-top: 6rem;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-primary);
+}
+
+.footer-copyright {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+    font-weight: 400;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 5rem 0 6rem;
+    }
+
+    .hero-headline {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-subheadline {
+        font-size: 1.125rem;
+        margin-bottom: 4rem;
+    }
+
+    .page-heading {
+        font-size: 2.25rem;
+    }
+
+    /* Mobile Navigation - Vertical, Centered, Touch-Friendly */
+    .nav-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 1.5rem; /* Increased tap spacing for touch */
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border-color); /* Subtle divider */
+    }
+
+    .nav-link:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+
+    .nav-link.primary-path {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 1.5rem; /* Increased tap spacing */
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-link.primary-path:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+
+    .pathway-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .pathway-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .pathway-title {
+        font-size: 1.5rem;
+    }
+
+    .section-heading {
+        font-size: 1.75rem;
+    }
+
+    .content-block:has(.video-wrapper),
+    .content-block:has(.video-coming-soon),
+    .content-block:has(.form-wrapper) {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 4rem 0 5rem;
+    }
+
+    .hero-headline {
+        font-size: 2rem;
+    }
+
+    .hero-subheadline {
+        font-size: 1rem;
+    }
+
+    .page-section {
+        padding: 4rem 0;
+    }
+
+    .page-heading {
+        font-size: 1.875rem;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+}
