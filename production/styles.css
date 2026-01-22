@@ -103,6 +103,11 @@ body {
     color: var(--accent-primary);
 }
 
+.site-logo { 
+  height: 40px;
+  width: auto;
+}
+
 /* Navigation - Structured and prominent */
 .nav {
     display: flex;
@@ -649,3 +654,4 @@ body {
         padding: 0 20px;
     }
 }
+
