@@ -275,7 +275,7 @@ body {
     padding: 9rem 0 10rem;
     text-align: center;
     background-color: var(--bg-primary);
-    background-image: url("production/assets/images/cafe2.png");
+    background-image: url("assets/images/cafe2.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -1070,7 +1070,7 @@ body {
 
     .hero {
         padding: 0 0 2rem 0;
-        background-image: url("cafe2b.png");
+        background-image: url("assets/images/cafe2b.png");
         background-size: 100% auto;
         background-position: center top;
         background-repeat: no-repeat;
