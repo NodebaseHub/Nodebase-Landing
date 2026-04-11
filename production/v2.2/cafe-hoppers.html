@@ -14,6 +14,21 @@ gtag('config', 'G-WK983SLBZX');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nodebase Hub | Cafe Hoppers</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+    body {
+      background-color: #FAF7F4;
+    }
+    h1.page-heading,
+    h2.section-heading {
+      color: #1A1A1A;
+      font-family: Georgia, serif;
+    }
+    main p {
+      color: #3D3D3D;
+      font-family: Inter, sans-serif;
+    }
+    </style>
 </head>
 <body>
     <!-- Header Navigation - Same on all pages -->
@@ -44,33 +59,58 @@ gtag('config', 'G-WK983SLBZX');
     <!-- Main Content -->
     <main class="main">
         <section class="page-section">
-            <div class="container container-content">
+            <div class="container container-content" style="max-width:860px; margin:0 auto; padding:48px 24px;">
                 <h1 class="page-heading">For Cafe Hoppers</h1>
+
+                <div style="text-align:center; margin:0.75rem 0 56px; padding:0 0.5rem; box-sizing:border-box;">
+                    <a href="https://chat.whatsapp.com/IEDGaAcOyh9Cf5mApGQ5ds" style="display:inline-block; background-color:#25D366; color:#ffffff; font-family:Inter,sans-serif; font-size:16px; font-weight:500; padding:14px 32px; border-radius:50px; text-decoration:none; letter-spacing:0.3px; box-shadow:0 4px 14px rgba(37,211,102,0.35);">Join the Café Hoppers Community on WhatsApp</a>
+                </div>
                 
                 <!-- Benefits Explanation -->
-                <div class="content-block">
+                <div class="content-block" style="margin-bottom:56px;">
                     <p class="lead-text">You know the difference between a café that cares and one that doesn't. You seek out independent places, talk to baristas, and value the story behind your cup. Nodebase helps you discover those cafés and connect with a community that shares your values.</p>
-                    <p>We're building a platform where coffee lovers can explore independent cafés doing meaningful work. Discover places that source ethically, roast thoughtfully, and create spaces worth supporting. Join a community that values craft, transparency, and the connections that happen over great coffee.</p>
+                    <p>A community already discovering Hong Kong's best independent cafés—places that source ethically, roast thoughtfully, and create spaces worth supporting. Use the map below, trade tips on WhatsApp, and meet people who care about craft, transparency, and the connections that happen over great coffee.</p>
                 </div>
 
-                <!-- Video Section -->
-                <div class="content-block">
-                    <h2 class="section-heading">See How It Works</h2>
-                    <p class="form-intro">Watch this short overview to see how Nodebase connects cafe hoppers with independent cafés:</p>
-                    <div class="video-coming-soon">
-                        <p class="coming-soon-text">Coming soon</p>
+                <!-- Community map -->
+                <div class="content-block" style="margin-bottom:56px;">
+                    <h2 class="section-heading">Cafés Discovered by the Community</h2>
+                    <div style="width:48px; height:3px; background-color:#C8956C; border-radius:2px; margin: 8px 0 24px 0;"></div>
+                    <div style="width:100%; max-width:800px; margin:0 auto; border-radius:16px; overflow:hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.10);">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1YMElzGlLqixt2MrpxP6aObntkjSTPFA&ehbc=2E312F" width="100%" height="480" style="display:block; border:0;" allowfullscreen="" loading="lazy"></iframe>
+<script>
+(function() {
+  var mapFrame = document.querySelector('iframe[src*="google.com/maps/d/embed"]');
+  if (mapFrame) {
+    mapFrame.addEventListener('load', function() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'map_loaded', {
+          'event_category': 'Community Map',
+          'event_label': 'Cafe Hoppers Map'
+        });
+      }
+    });
+  }
+})();
+</script>
                     </div>
                 </div>
 
+                <!-- Video Section -->
+                <div class="content-block" style="margin-bottom:56px;">
+                    <h2 class="section-heading">Explore with the Community</h2>
+                    <div style="width:48px; height:3px; background-color:#C8956C; border-radius:2px; margin: 8px 0 24px 0;"></div>
+                    <p class="form-intro">People share new spots, ask for recs, and plan café crawls in the WhatsApp group. The map above keeps growing when someone adds a place worth the trip.</p>
+                </div>
+
                 <!-- Embedded Form -->
-                <div class="content-block">
-                    <h2 class="section-heading">Join the Early Community</h2>
-                    <p class="form-intro">We're in early stages and building with cafe hoppers like you. Share your interest and help shape what Nodebase becomes:</p>
+                <div class="content-block" style="margin-bottom:56px;">
+                    <h2 class="section-heading">Join the Conversation</h2>
+                    <div style="width:48px; height:3px; background-color:#C8956C; border-radius:2px; margin: 8px 0 24px 0;"></div>
+                    <p class="form-intro">New finds, tasting notes, and crawl ideas land in WhatsApp first. If we add a short interest form later, it will live here.</p>
                     <div class="form-wrapper">
                         <!-- Placeholder Airtable or Tally form embed - Replace with your actual form URL -->
-                    <div class="form-coming-soon">
-                          <p class="coming-soon-text">Coming soon</p>
-                        </div>
+                    </div>
                 </div>
             </div>
         </section>
