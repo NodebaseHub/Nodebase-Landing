@@ -38,16 +38,59 @@ gtag('config', 'G-WK983SLBZX');
       text-transform: none;
     }
     main p.map-embed-caption {
-      font-size: 14px;
-      font-style: italic;
-      color: #666666;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      color: #3D3D3D;
       text-align: left;
-      margin: 0 0 12px 0;
+      margin: 0 0 14px 0;
+    }
+    .map-content-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
     }
     .map-section-separator {
       border: none;
       border-top: 1px solid #E5E5E5;
       margin: 40px 0 32px 0;
+    }
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      box-sizing: border-box;
+    }
+    .section-hero {
+      width: 100%;
+      background-color: #F5F0E8;
+      margin-top: 0;
+      padding: 40px 24px 40px 24px;
+      box-sizing: border-box;
+    }
+    .section-hero .section-inner {
+      text-align: center;
+    }
+    .section-card-grid {
+      width: 100%;
+      background-color: #F7F4F0;
+      padding: 32px 24px 56px 24px;
+      box-sizing: border-box;
+    }
+    .section-map {
+      width: 100%;
+      background-color: #FFFFFF;
+      padding: 56px 24px;
+      box-sizing: border-box;
+    }
+    .section-copy {
+      width: 100%;
+      background-color: #FFFFFF;
+      padding: 48px 24px 24px 24px;
+      box-sizing: border-box;
+    }
+    .hoppers-page-tail {
+      padding: 0 0 48px 0;
+      box-sizing: border-box;
     }
     .hoppers-community-cards {
       --card-primary-gold: #C9A962;
@@ -67,11 +110,10 @@ gtag('config', 'G-WK983SLBZX');
       box-sizing: border-box;
     }
     .hoppers-community-cards .cafe-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
       gap: 24px;
       width: 100%;
+      grid-template-columns: 1fr;
     }
     .hoppers-community-cards .cafe-card {
       background: var(--card-bg-white);
@@ -80,9 +122,11 @@ gtag('config', 'G-WK983SLBZX');
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
       transition: transform 0.2s, box-shadow 0.2s;
       cursor: pointer;
-      flex: 0 0 auto;
       width: 100%;
+      min-width: 0;
       max-width: 100%;
+      display: flex;
+      flex-direction: column;
     }
     .hoppers-community-cards .cafe-card:hover {
       transform: translateY(-4px);
@@ -108,6 +152,9 @@ gtag('config', 'G-WK983SLBZX');
     }
     .hoppers-community-cards .cafe-content {
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
     .hoppers-community-cards .cafe-header {
       display: flex;
@@ -148,6 +195,7 @@ gtag('config', 'G-WK983SLBZX');
       padding: 12px 16px;
       margin: 16px 0;
       border-radius: 0 8px 8px 0;
+      flex: 1;
     }
     .hoppers-community-cards .cafe-quote p {
       font-size: 14px;
@@ -168,7 +216,7 @@ gtag('config', 'G-WK983SLBZX');
     .hoppers-community-cards .cafe-actions {
       display: flex;
       gap: 12px;
-      margin-top: 16px;
+      margin-top: auto;
     }
     .hoppers-community-cards .btn {
       flex: 1;
@@ -198,21 +246,28 @@ gtag('config', 'G-WK983SLBZX');
       background: #EAEAEA;
     }
     @media (min-width: 900px) {
-      .hoppers-community-cards .cafe-card {
-        width: calc((100% - 48px) / 3);
-        max-width: calc((100% - 48px) / 3);
+      .hoppers-community-cards .cafe-grid {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
     @media (min-width: 600px) and (max-width: 899px) {
-      .hoppers-community-cards .cafe-card {
-        width: calc((100% - 24px) / 2);
-        max-width: calc((100% - 24px) / 2);
+      .hoppers-community-cards .cafe-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
     @media (max-width: 599px) {
-      .hoppers-community-cards .cafe-card {
-        width: 100%;
-        max-width: 100%;
+      .page-section {
+        display: flex;
+        flex-direction: column;
+      }
+      .section-hero {
+        order: -4;
+      }
+      .section-copy {
+        order: -3;
+      }
+      .section-card-grid {
+        order: -2;
       }
       .hoppers-community-cards .cafe-header {
         flex-direction: column;
@@ -220,6 +275,28 @@ gtag('config', 'G-WK983SLBZX');
       }
       .hoppers-community-cards .recommender-badge {
         align-self: flex-start;
+      }
+      .hoppers-community-cards .cafe-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 16px;
+        padding-bottom: 16px;
+      }
+      .hoppers-community-cards .cafe-card {
+        min-width: 280px !important;
+        max-width: 280px !important;
+        width: 280px !important;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+      }
+      .section-map {
+        order: -1;
+      }
+      .hoppers-page-tail {
+        order: 0;
       }
     }
     </style>
@@ -239,11 +316,11 @@ gtag('config', 'G-WK983SLBZX');
                 </button>
                 <nav class="nav">
                     <a href="index.html" class="nav-link">Home</a>
-                    <a href="cafe-owners.html" class="nav-link primary-path">Cafe Owners</a>
                     <a href="cafe-hoppers.html" class="nav-link primary-path active">Cafe Hoppers</a>
+                    <a href="cafe-owners.html" class="nav-link primary-path">Cafe Owners</a>
                     <a href="contact.html" class="nav-link">Contact</a>
                     <div class="lang-toggle">
-                        <a href="cafe-hoppers.html">EN</a> | <a href="cafe-hoppers-zh.html">繁</a>
+                        <a href="cafe-hoppers.html" style="font-weight: 700; color: #1A1A1A;">EN</a> | <a href="cafe-hoppers-zh.html" style="font-weight: 400; color: #999999;">繁</a>
                     </div>
                 </nav>
             </div>
@@ -252,22 +329,26 @@ gtag('config', 'G-WK983SLBZX');
 
     <!-- Main Content -->
     <main class="main">
-        <section class="page-section">
-            <div class="container container-content" style="max-width:860px; margin:0 auto; padding:48px 24px;">
-                <h1 class="page-heading" style="margin:0 0 24px 0;">For Cafe Hoppers</h1>
-
-                <div style="text-align:center; margin:0 0 32px; padding:0 0.5rem; box-sizing:border-box;">
-                    <a href="https://chat.whatsapp.com/IEDGaAcOyh9Cf5mApGQ5ds" style="display:inline-block; background-color:#25D366; color:#ffffff; font-family:Inter,sans-serif; font-size:16px; font-weight:500; padding:14px 32px; border-radius:50px; text-decoration:none; letter-spacing:0.3px; box-shadow:0 4px 14px rgba(37,211,102,0.35);">Join the Café Hoppers Community on WhatsApp</a>
+        <section class="page-section" style="padding-top: 0; margin-top: 0;">
+            <section class="section-hero">
+                <div class="section-inner">
+                    <h1 class="page-heading" style="margin:0 0 24px 0;">For Cafe Hoppers</h1>
+                    <a href="https://chat.whatsapp.com/IEDGaAcOyh9Cf5mApGQ5ds" onclick="trackWhatsAppJoin()" style="display:inline-block; background-color:#25D366; color:#ffffff; font-family:Inter,sans-serif; font-size:16px; font-weight:500; padding:14px 32px; border-radius:50px; text-decoration:none; letter-spacing:0.3px; box-shadow:0 4px 14px rgba(37,211,102,0.35);">Join the Café Hoppers Community on WhatsApp</a>
                 </div>
-                
+            </section>
+
+            <section class="section-copy">
+                <div class="section-inner">
                 <!-- Benefits Explanation -->
                 <div class="content-block" style="margin-bottom:40px;">
-                    <p class="lead-text">You know the difference between a café that cares and one that doesn't. You seek out independent places, talk to baristas, and value the story behind your cup. Nodebase helps you discover those cafés and connect with a community that shares your values.</p>
+                    <p class="lead-text" style="max-width: 100%;">You know the difference between a café that cares and one that doesn't. You seek out independent places, talk to baristas, and value the story behind your cup. Nodebase helps you discover those cafés and connect with a community that shares your values.</p>
                     <p>A community already discovering Hong Kong's best independent cafés—places that source ethically, roast thoughtfully, and create spaces worth supporting. Use the map below, trade tips on WhatsApp, and meet people who care about craft, transparency, and the connections that happen over great coffee.</p>
                 </div>
+                </div>
+            </section>
 
-                <!-- Community map -->
-                <div class="content-block" style="margin-bottom:56px;">
+            <section class="section-card-grid">
+                <div class="section-inner">
                     <h2 class="section-heading">Cafés Discovered by the Community</h2>
                     <div style="width:48px; height:3px; background-color:#C8956C; border-radius:2px; margin: 8px 0 24px 0;"></div>
                     <p class="community-picks-label">Picked by people in the community — not an algorithm.</p>
@@ -289,7 +370,7 @@ gtag('config', 'G-WK983SLBZX');
                         <div class="what-to-try"><span>Try:</span> Their espresso</div>
                     </div>
                     <div class="cafe-actions">
-                        <a href="https://share.google/nkqzSJjTDHiq1iXuq" target="_blank" class="btn btn-primary" onclick="event.stopPropagation()">Get Directions</a>
+                        <a href="https://share.google/nkqzSJjTDHiq1iXuq" target="_blank" class="btn btn-primary" onclick="trackDirectionsClick('2 1/2', 'David')">Get Directions</a>
                     </div>
                 </div>
             </article>
@@ -310,7 +391,7 @@ gtag('config', 'G-WK983SLBZX');
                         <div class="what-to-try"><span>Try:</span> Their espresso</div>
                     </div>
                     <div class="cafe-actions">
-                        <a href="https://share.google/cfRW4tBXXd4j64vGP" target="_blank" class="btn btn-primary" onclick="event.stopPropagation()">Get Directions</a>
+                        <a href="https://share.google/cfRW4tBXXd4j64vGP" target="_blank" class="btn btn-primary" onclick="trackDirectionsClick('Oma Specialty Coffee', 'Clarence')">Get Directions</a>
                     </div>
                 </div>
             </article>
@@ -331,7 +412,7 @@ gtag('config', 'G-WK983SLBZX');
                         <div class="what-to-try"><span>Try:</span> Piccolo</div>
                     </div>
                     <div class="cafe-actions">
-                        <a href="https://share.google/aa5WcfxbJSOuln8KO" target="_blank" class="btn btn-primary" onclick="event.stopPropagation()">Get Directions</a>
+                        <a href="https://share.google/aa5WcfxbJSOuln8KO" target="_blank" class="btn btn-primary" onclick="trackDirectionsClick('Soul Coffee & Matcha by IDFC', 'JT')">Get Directions</a>
                     </div>
                 </div>
             </article>
@@ -352,7 +433,7 @@ gtag('config', 'G-WK983SLBZX');
                         <div class="what-to-try"><span>Try:</span> Biscoff Cheesecake</div>
                     </div>
                     <div class="cafe-actions">
-                        <a href="https://share.google/kQYjNzO6AE1DNcVEk" target="_blank" class="btn btn-primary" onclick="event.stopPropagation()">Get Directions</a>
+                        <a href="https://share.google/kQYjNzO6AE1DNcVEk" target="_blank" class="btn btn-primary" onclick="trackDirectionsClick('Ninetys Coffee & Roastery', 'JT')">Get Directions</a>
                     </div>
                 </div>
             </article>
@@ -373,15 +454,41 @@ gtag('config', 'G-WK983SLBZX');
                         <div class="what-to-try"><span>Try:</span> Steak & Eggs + Hot Beverage lunch set ($168)</div>
                     </div>
                     <div class="cafe-actions">
-                        <a href="https://share.google/Q0WXTS4MiaovGcIiM" target="_blank" class="btn btn-primary" onclick="event.stopPropagation()">Get Directions</a>
+                        <a href="https://share.google/Q0WXTS4MiaovGcIiM" target="_blank" class="btn btn-primary" onclick="trackDirectionsClick('Liffee Coffee', 'JT')">Get Directions</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Café 6: Rhino Kitchen -->
+            <article class="cafe-card" data-cafe="Rhino Kitchen" data-recommender="Angie" onclick="trackCafeClick('Rhino Kitchen', 'Angie')">
+                <div class="cafe-image"><span class="cafe-image-location">Sai Wan Ho</span></div>
+                <div class="cafe-content">
+                    <div class="cafe-header">
+                        <div>
+                            <h3 class="cafe-name">Rhino Kitchen</h3>
+                            <p class="cafe-location">📍 Holy Cross Path, Sai Wan Ho</p>
+                        </div>
+                        <span class="recommender-badge">Rec by <strong>Angie</strong></span>
+                    </div>
+                    <div class="cafe-quote">
+                        <p>"Good coffee and food! Food is also priced pretty decent compared to central and west! Also has high chairs for babies and a small outdoor area (two tables) for those visiting with pets 🫶"</p>
+                    </div>
+                    <div class="cafe-actions">
+                        <a href="https://www.google.com/search?q=rhino+cafe+sai+wan+ho&client=ms-android-samsung-ss&sca_esv=d36697531cc09700&cs=0&sxsrf=ANbL-n5D-IaG9HHm5XmzAMqTyYu7ivdDBg%3A1775999652570&ei=pJrbaYC7Is-l2roP_7regAo&biw=1440&bih=731&oq=rhino+coffee+sai+wan&gs_lp=Egxnd3Mtd2l6LXNlcnAiFHJoaW5vIGNvZmZlZSBzYWkgd2FuKgIIADIGEAAYFhgeMggQABiABBiiBDIIEAAYgAQYogQyBRAAGO8FMggQABiABBiiBDIFEAAY7wVIgVBQmglY-UZwAXgBkAEAmAHvBaABwimqAQ4wLjExLjMuMS4xLjIuMbgBA8gBAPgBAZgCFKACkyrCAgoQABiwAxjWBBhHwgIUEC4YgAQYkQIYxwEYigUYjgUYrwHCAgsQABiABBiRAhiKBcICChAuGIAEGEMYigXCAgUQLhiABMICCxAuGIAEGNEDGMcBwgIFEAAYgATCAiMQLhiABBiRAhjHARiKBRiOBRivARiXBRjcBBjeBBjgBNgBAcICChAAGIAEGEMYigXCAgcQABiABBgKwgILEC4YgAQYxwEYrwGYAwCIBgGQBgi6BgYIARABGBSSBwwxLjEwLjMuMi4yLjKgB5SVAbIHDDAuMTAuMy4yLjIuMrgHjyrCBwYwLjEyLjjIBzyACAA&sclient=gws-wiz-serp" target="_blank" class="btn btn-primary" onclick="trackDirectionsClick('Rhino Kitchen', 'Angie')">Get Directions</a>
                     </div>
                 </div>
             </article>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section class="section-map">
+                <div class="section-inner">
                     <hr class="map-section-separator">
+                    <div class="map-content-wrapper">
                     <p class="map-embed-caption">All community-recommended spots, mapped.</p>
-                    <div style="width:100%; max-width:800px; margin:0 auto; border-radius:16px; overflow:hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.10);">
+                    <div style="width:100%; border-radius:16px; overflow:hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.10);">
                     <iframe src="https://www.google.com/maps/d/embed?mid=1YMElzGlLqixt2MrpxP6aObntkjSTPFA&ehbc=2E312F" width="100%" height="480" style="display:block; border:0;" allowfullscreen="" loading="lazy"></iframe>
 <script>
 (function() {
@@ -399,13 +506,17 @@ gtag('config', 'G-WK983SLBZX');
 })();
 </script>
                     </div>
+                    </div>
                 </div>
+            </section>
 
+            <div class="hoppers-page-tail">
+                <div class="section-inner">
                 <!-- Video Section -->
                 <div class="content-block" style="margin-bottom:56px;">
                     <h2 class="section-heading">Explore with the Community</h2>
                     <div style="width:48px; height:3px; background-color:#C8956C; border-radius:2px; margin: 8px 0 24px 0;"></div>
-                    <p class="form-intro">People share new spots, ask for recs, and plan café crawls in the WhatsApp group. The map above keeps growing when someone adds a place worth the trip.</p>
+                    <p class="form-intro" style="max-width: 100%;">People share new spots, ask for recs, and plan café crawls in the WhatsApp group. The map above keeps growing when someone adds a place worth the trip.</p>
                 </div>
 
                 <!-- Embedded Form -->
@@ -417,6 +528,7 @@ gtag('config', 'G-WK983SLBZX');
                         <!-- Placeholder Airtable or Tally form embed - Replace with your actual form URL -->
                     </div>
                 </div>
+                </div>
             </div>
         </section>
     </main>
@@ -427,8 +539,8 @@ gtag('config', 'G-WK983SLBZX');
             <div class="footer-content">
                 <div class="footer-links">
                     <a href="index.html">Home</a>
-                    <a href="cafe-owners.html">Cafe Owners</a>
                     <a href="cafe-hoppers.html">Cafe Hoppers</a>
+                    <a href="cafe-owners.html">Cafe Owners</a>
                     <a href="contact.html">Contact</a>
                     <a href="investor-enquiries.html">Investor Enquiries</a>
                     <a href="join-the-mission.html">Join the Mission</a>
@@ -444,6 +556,18 @@ gtag('config', 'G-WK983SLBZX');
             gtag('event', 'cafe_card_click', {
                 'cafe_name': cafeName,
                 'recommender': recommender
+            });
+        }
+        function trackDirectionsClick(cafeName, recommender) {
+            event.stopPropagation();
+            gtag('event', 'get_directions_click', {
+                'cafe_name': cafeName,
+                'recommender': recommender
+            });
+        }
+        function trackWhatsAppJoin() {
+            gtag('event', 'whatsapp_join_click', {
+                'location': 'cafe_hoppers_page'
             });
         }
     </script>
