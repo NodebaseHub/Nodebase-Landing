@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -16,289 +16,322 @@ gtag('config', 'G-WK983SLBZX');
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-    body {
-      background-color: #FAF7F4;
-    }
-    h1.page-heading,
-    h2.section-heading {
-      color: #1A1A1A;
-      font-family: Georgia, serif;
-    }
-    main p {
-      color: #3D3D3D;
-      font-family: Inter, sans-serif;
-    }
-    main p.community-picks-label {
-      font-size: 15px;
-      font-style: italic;
-      color: #666666;
-      text-align: left;
-      margin: 0 0 24px 0;
-      letter-spacing: normal;
-      text-transform: none;
-    }
-    main p.map-embed-caption {
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 600;
-      color: #3D3D3D;
-      text-align: left;
-      margin: 0 0 14px 0;
-    }
-    .map-content-wrapper {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .map-section-separator {
-      border: none;
-      border-top: 1px solid #E5E5E5;
-      margin: 40px 0 32px 0;
-    }
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-      box-sizing: border-box;
-    }
-    .section-hero {
-      width: 100%;
-      background-color: #F5F0E8;
-      margin-top: 0;
-      padding: 40px 24px 40px 24px;
-      box-sizing: border-box;
-    }
-    .section-hero .section-inner {
-      text-align: center;
-    }
-    .section-card-grid {
-      width: 100%;
-      background-color: #F7F4F0;
-      padding: 32px 24px 56px 24px;
-      box-sizing: border-box;
-    }
-    .section-map {
-      width: 100%;
-      background-color: #FFFFFF;
-      padding: 56px 24px;
-      box-sizing: border-box;
-    }
-    .section-copy {
-      width: 100%;
-      background-color: #FFFFFF;
-      padding: 48px 24px 24px 24px;
-      box-sizing: border-box;
-    }
-    .hoppers-page-tail {
-      padding: 0 0 48px 0;
-      box-sizing: border-box;
-    }
-    .hoppers-community-cards {
-      --card-primary-gold: #C9A962;
-      --card-primary-dark: #1A1A1A;
-      --card-primary-brown: #3D2914;
-      --card-bg-light: #F8F8F8;
-      --card-bg-white: #FFFFFF;
-      --card-text-primary: #1A1A1A;
-      --card-text-secondary: #666666;
-      --card-text-muted: #999999;
-      box-sizing: border-box;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    .hoppers-community-cards *,
-    .hoppers-community-cards *::before,
-    .hoppers-community-cards *::after {
-      box-sizing: border-box;
-    }
-    .hoppers-community-cards .cafe-grid {
-      display: grid;
-      gap: 24px;
-      width: 100%;
-      grid-template-columns: 1fr;
-    }
-    .hoppers-community-cards .cafe-card {
-      background: var(--card-bg-white);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      transition: transform 0.2s, box-shadow 0.2s;
-      cursor: pointer;
-      width: 100%;
-      min-width: 0;
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    .hoppers-community-cards .cafe-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    }
-    .hoppers-community-cards .cafe-image {
-      width: 100%;
-      height: 180px;
-      background: linear-gradient(135deg, #E8DDD0 0%, #D4C4B0 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 12px;
-    }
-    .hoppers-community-cards .cafe-image-location {
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: #8B7355;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    .hoppers-community-cards .cafe-content {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-    .hoppers-community-cards .cafe-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 12px;
-    }
-    .hoppers-community-cards .cafe-name {
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--card-text-primary);
-      margin-bottom: 4px;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    .hoppers-community-cards .cafe-location {
-      font-size: 13px;
-      color: var(--card-text-secondary);
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    .hoppers-community-cards .recommender-badge {
-      background: var(--card-bg-light);
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--card-text-secondary);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    .hoppers-community-cards .recommender-badge strong {
-      color: var(--card-primary-gold);
-    }
-    .hoppers-community-cards .cafe-quote {
-      background: var(--card-bg-light);
-      border-left: 3px solid var(--card-primary-gold);
-      padding: 12px 16px;
-      margin: 16px 0;
-      border-radius: 0 8px 8px 0;
-      flex: 1;
-    }
-    .hoppers-community-cards .cafe-quote p {
-      font-size: 14px;
-      color: var(--card-text-secondary);
-      font-style: italic;
-      margin-bottom: 8px;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    .hoppers-community-cards .what-to-try {
-      font-size: 13px;
-      color: var(--card-text-primary);
-      font-weight: 500;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    .hoppers-community-cards .what-to-try span {
-      color: var(--card-primary-gold);
-    }
-    .hoppers-community-cards .cafe-actions {
-      display: flex;
-      gap: 12px;
-      margin-top: auto;
-    }
-    .hoppers-community-cards .btn {
-      flex: 1;
-      padding: 12px 20px;
-      border-radius: 10px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      text-align: center;
-      transition: all 0.2s;
-      border: none;
-      cursor: pointer;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    .hoppers-community-cards .btn-primary {
-      background: var(--card-primary-gold);
-      color: white;
-    }
-    .hoppers-community-cards .btn-primary:hover {
-      background: #B8984F;
-    }
-    .hoppers-community-cards .btn-secondary {
-      background: var(--card-bg-light);
-      color: var(--card-text-secondary);
-    }
-    .hoppers-community-cards .btn-secondary:hover {
-      background: #EAEAEA;
-    }
-    @media (min-width: 900px) {
-      .hoppers-community-cards .cafe-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    @media (min-width: 600px) and (max-width: 899px) {
-      .hoppers-community-cards .cafe-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media (max-width: 599px) {
-      .page-section {
-        display: flex;
-        flex-direction: column;
-      }
-      .section-hero {
-        order: -4;
-      }
-      .section-copy {
-        order: -3;
-      }
-      .section-card-grid {
-        order: -2;
-      }
-      .hoppers-community-cards .cafe-header {
-        flex-direction: column;
-        gap: 8px;
-      }
-      .hoppers-community-cards .recommender-badge {
-        align-self: flex-start;
-      }
-      .hoppers-community-cards .cafe-grid {
-        display: flex !important;
-        flex-direction: row !important;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        gap: 16px;
-        padding-bottom: 16px;
-      }
-      .hoppers-community-cards .cafe-card {
-        min-width: 280px !important;
-        max-width: 280px !important;
-        width: 280px !important;
-        flex-shrink: 0;
-        scroll-snap-align: start;
-      }
-      .section-map {
-        order: -1;
-      }
-      .hoppers-page-tail {
-        order: 0;
-      }
-    }
+body {
+  background-color: #FAF7F4;
+}
+h1.page-heading,
+h2.section-heading {
+  color: #1A1A1A;
+  font-family: Georgia, serif;
+}
+main p {
+  color: #3D3D3D;
+  font-family: Inter, sans-serif;
+}
+
+/* SECTION WRAPPERS */
+.section-hero {
+  width: 100%;
+  background-color: #F5F0E8;
+  padding: 48px 24px 40px 24px;
+  box-sizing: border-box;
+}
+.section-curators {
+  width: 100%;
+  background-color: #F7F4F0;
+  padding: 48px 24px 64px 24px;
+  box-sizing: border-box;
+}
+.section-whatsapp-cta {
+  width: 100%;
+  background-color: #F5F0E8;
+  padding: 40px 24px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.section-discoveries {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 48px 24px;
+  box-sizing: border-box;
+}
+.section-map {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 48px 24px 56px 24px;
+  box-sizing: border-box;
+}
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* CURATOR PROFILE CARD */
+.curator-profile {
+  background: #FFFFFF;
+  border-radius: 16px;
+  border-left: 4px solid #C9A962;
+  padding: 24px 24px 24px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s;
+}
+.curator-profile:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.09);
+}
+.curator-profile--activating {
+  opacity: 0.72;
+}
+.curator-header-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.curator-initials {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  background-color: #C9A962;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+.curator-meta { flex: 1; min-width: 0; }
+.curator-name {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin: 0 0 3px 0;
+  line-height: 1.2;
+}
+.curator-descriptor {
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  color: #C9A962;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+.curator-footer-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.curator-territory-pill {
+  display: inline-block;
+  background: #EEEBE6;
+  color: #666666;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.curator-pick-count {
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  color: #AAAAAA;
+}
+
+/* CAFÉ ITEMS */
+.curator-cafes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+.curator-cafe-item {
+  background: #F8F7F4;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.cafe-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+.cafe-item-name {
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+.cafe-item-location-pill {
+  display: inline-block;
+  background: #E8E4DE;
+  color: #888888;
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+.cafe-item-quote {
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  color: #666666;
+  margin: 0 0 6px 0;
+  line-height: 1.5;
+}
+.cafe-item-try {
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #3D3D3D;
+  margin: 0 0 8px 0;
+}
+.cafe-item-directions {
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #C9A962;
+  text-decoration: none;
+  display: inline-block;
+}
+.cafe-item-directions:hover { color: #B8984F; }
+.cafe-item-pending {
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  color: #BBBBBB;
+  font-style: italic;
+  margin: 0;
+}
+
+/* COMMUNITY DISCOVERIES */
+.discovery-spotlight {
+  background: #F8F7F4;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 520px;
+}
+.discovery-month-label {
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #C9A962;
+  margin: 0 0 10px 0;
+}
+.discovery-cafe-name {
+  font-family: Georgia, serif;
+  font-size: 19px;
+  color: #1A1A1A;
+  margin: 0 0 4px 0;
+}
+.discovery-location {
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  color: #666666;
+  margin: 0 0 6px 0;
+}
+.discovery-quote {
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  color: #666666;
+  margin: 0 0 10px 0;
+  line-height: 1.5;
+}
+.discovery-credit {
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #3D3D3D;
+  margin: 0 0 10px 0;
+}
+.discovery-directions {
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #C9A962;
+  text-decoration: none;
+}
+.discovery-directions:hover { color: #B8984F; }
+
+/* MAP */
+.map-section-separator {
+  border: none;
+  border-top: 1px solid #E5E5E5;
+  margin: 0 0 32px 0;
+}
+.map-embed-caption {
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #3D3D3D;
+  margin: 0 0 14px 0;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .curator-cafes {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .curator-cafe-item {
+    flex: 1 1 260px;
+    max-width: 340px;
+  }
+}
+
+@media (min-width: 900px) {
+  .curator-profile {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 0 32px;
+    align-items: start;
+  }
+  .curator-header-row {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 0;
+  }
+  .curator-cafes {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0;
+  }
+  .curator-cafes {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .curator-cafe-item {
+    flex: 1 1 220px;
+    max-width: 320px;
+  }
+  .section-hero .section-inner {
+    padding: 0 24px;
+  }
+}
+
+.curator-cafe-item--has-photo {
+  padding-top: 0;
+  overflow: hidden;
+}
+.cafe-item-photo {
+  width: calc(100% + 32px);
+  margin: 0 -16px 12px -16px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  display: block;
+}
     </style>
 </head>
 <body>
@@ -329,207 +362,538 @@ gtag('config', 'G-WK983SLBZX');
 
     <!-- Main Content -->
     <main class="main">
-        <section class="page-section" style="padding-top: 0; margin-top: 0;">
+        <section class="page-section" style="padding-top:0;margin-top:0;">
+
+            <!-- HERO -->
             <section class="section-hero">
                 <div class="section-inner">
-                    <h1 class="page-heading" style="margin:0 0 24px 0;">For Cafe Hoppers</h1>
-                    <a href="https://chat.whatsapp.com/IEDGaAcOyh9Cf5mApGQ5ds" onclick="trackWhatsAppJoin()" style="display:inline-block; background-color:#25D366; color:#ffffff; font-family:Inter,sans-serif; font-size:16px; font-weight:500; padding:14px 32px; border-radius:50px; text-decoration:none; letter-spacing:0.3px; box-shadow:0 4px 14px rgba(37,211,102,0.35);">Join the Café Hoppers Community on WhatsApp</a>
+                    <h1 class="page-heading" style="margin:0 0 14px 0;text-align:left;">Café Hoppers HK</h1>
+                    <p style="font-size:17px;color:#3D3D3D;max-width:540px;
+                       line-height:1.65;margin:0;text-align:left;">
+                        A small group of coffee people in Hong Kong, building a map of
+                        places worth going to.
+                    </p>
                 </div>
             </section>
 
-            <section class="section-copy">
+            <!-- THE PEOPLE BEHIND THE MAP -->
+            <section class="section-curators">
                 <div class="section-inner">
-                <!-- Benefits Explanation -->
-                <div class="content-block" style="margin-bottom:40px;">
-                    <p class="lead-text" style="max-width: 100%;">You know the difference between a café that cares and one that doesn't. You seek out independent places, talk to baristas, and value the story behind your cup. Nodebase helps you discover those cafés and connect with a community that shares your values.</p>
-                    <p>A community already discovering Hong Kong's best independent cafés—places that source ethically, roast thoughtfully, and create spaces worth supporting. Use the map below, trade tips on WhatsApp, and meet people who care about craft, transparency, and the connections that happen over great coffee.</p>
-                </div>
+                    <h2 class="section-heading">The People Behind the Map</h2>
+                    <div style="width:48px;height:3px;background-color:#C8956C;
+                         border-radius:2px;margin:8px 0 24px 0;"></div>
+                    <p style="font-family:Inter,sans-serif;font-size:14px;font-style:italic;
+                       color:#666666;margin:0 0 40px 0;">
+                      Named people with a track record. Their picks are on the map.
+                    </p>
+
+                    <!-- DAVID -->
+                    <div class="curator-profile" onclick="trackCuratorClick('David')">
+                      <div class="curator-header-row">
+                        <div class="curator-initials">D</div>
+                        <div class="curator-meta">
+                          <h3 class="curator-name">David</h3>
+                          <p class="curator-descriptor">Sets a high bar. Arabica purist.</p>
+                          <div class="curator-footer-row">
+                            <span class="curator-territory-pill">Sai Ying Pun</span>
+                            <span class="curator-pick-count">1 pick</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="curator-cafes">
+                        <div class="curator-cafe-item" onclick="event.stopPropagation();
+                          trackCafeClick('2½','David')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">2½</span>
+                            <span class="cafe-item-location-pill">Sai Ying Pun</span>
+                          </div>
+                          <p class="cafe-item-quote">"Many of the staff I know have left
+                            but they managed to keep up the vibe."</p>
+                          <p class="cafe-item-try">Try: Their espresso</p>
+                          <a href="https://share.google/nkqzSJjTDHiq1iXuq" target="_blank"
+                            class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('2½','David',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- CLARENCE -->
+                    <div class="curator-profile" onclick="trackCuratorClick('Clarence')">
+                      <div class="curator-header-row">
+                        <div class="curator-initials">C</div>
+                        <div class="curator-meta">
+                          <h3 class="curator-name">Clarence</h3>
+                          <p class="curator-descriptor">Geisha varietal hunter.
+                            Oma regular since 2017.</p>
+                          <div class="curator-footer-row">
+                            <span class="curator-territory-pill">Tai Hang</span>
+                            <span class="curator-pick-count">1 pick</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="curator-cafes">
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Oma Specialty Coffee','Clarence')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Oma Specialty Coffee</span>
+                            <span class="cafe-item-location-pill">Tai Hang</span>
+                          </div>
+                          <p class="cafe-item-quote">"Great roastery — Geisha varietals.
+                            Top notch. I only really care about the coffee."</p>
+                          <p class="cafe-item-try">Try: Their espresso</p>
+                          <a href="https://share.google/cfRW4tBXXd4j64vGP" target="_blank"
+                            class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Oma Specialty Coffee','Clarence',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- ANGIE -->
+                    <div class="curator-profile" onclick="trackCuratorClick('Angie')">
+                      <div class="curator-header-row">
+                        <div class="curator-initials">A</div>
+                        <div class="curator-meta">
+                          <h3 class="curator-name">Angie</h3>
+                          <p class="curator-descriptor">East HK Island. Family-friendly
+                            and worth the trip.</p>
+                          <div class="curator-footer-row">
+                            <span class="curator-territory-pill">Sai Wan Ho</span>
+                            <span class="curator-pick-count">1 pick</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="curator-cafes">
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Rhino Kitchen','Angie')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Rhino Kitchen</span>
+                            <span class="cafe-item-location-pill">Sai Wan Ho</span>
+                          </div>
+                          <p class="cafe-item-quote">"Good coffee and food. Decent prices
+                            vs Central and west. High chairs, outdoor area, pet-friendly."</p>
+                          <a href="https://share.google/h5dXLJFSip98Gj9uq" target="_blank"
+                            class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Rhino Kitchen','Angie',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- DAVE -->
+                    <div class="curator-profile" onclick="trackCuratorClick('Dave')">
+                      <div class="curator-header-row">
+                        <div class="curator-initials">D</div>
+                        <div class="curator-meta">
+                          <h3 class="curator-name">Dave</h3>
+                          <p class="curator-descriptor">Runs before coffee.
+                            Kowloon side.</p>
+                          <div class="curator-footer-row">
+                            <span class="curator-territory-pill">Sham Shui Po</span>
+                            <span class="curator-pick-count">1 pick</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="curator-cafes">
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Layback Matters','Dave')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Layback Matters</span>
+                            <span class="cafe-item-location-pill">Sham Shui Po</span>
+                          </div>
+                          <p class="cafe-item-quote">"A particularly interesting one is
+                            Layback Matters. They let you decide how much you want to pay
+                            for your coffee. Yes it is true!"</p>
+                          <a href="https://share.google/3BfAyepbwvwDDV1iA" target="_blank"
+                            class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Layback Matters','Dave',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- MICHAEL -->
+                    <div class="curator-profile" onclick="trackCuratorClick('Michael')">
+                      <div class="curator-header-row">
+                        <div class="curator-initials">M</div>
+                        <div class="curator-meta">
+                          <h3 class="curator-name">Michael</h3>
+                          <p class="curator-descriptor">Extraction-focused. Finds the
+                            quiet gems in Central.</p>
+                          <div class="curator-footer-row">
+                            <span class="curator-territory-pill">Central</span>
+                            <span class="curator-pick-count">1 pick</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="curator-cafes">
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Milligram Coffee','Michael')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Milligram Coffee</span>
+                            <span class="cafe-item-location-pill">Central</span>
+                          </div>
+                          <p class="cafe-item-quote">"Well-prepped espresso, good
+                            extraction, well balanced, and great Japanese style decor
+                            inside. Great little escape in Central."</p>
+                          <a href="https://maps.app.goo.gl/GtfwgcfWUtbozhd97" target="_blank"
+                            class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Milligram Coffee','Michael',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- SHARON -->
+                    <div class="curator-profile curator-profile--activating"
+                      onclick="trackCuratorClick('Sharon')">
+                      <div class="curator-header-row">
+                        <div class="curator-initials">S</div>
+                        <div class="curator-meta">
+                          <h3 class="curator-name">Sharon</h3>
+                          <p class="curator-descriptor">Finds the friendly, unusual,
+                            and just-opened.</p>
+                          <div class="curator-footer-row">
+                            <span class="curator-territory-pill">Hong Kong</span>
+                            <span class="curator-pick-count">1 pick</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="curator-cafes">
+                        <div class="curator-cafe-item">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Joymore</span>
+                            <span class="cafe-item-location-pill">King Kwong St</span>
+                          </div>
+                          <p class="cafe-item-quote">"Steamed buns with various fillings,
+                            chef painted the exterior, extremely friendly. Visited on
+                            opening day."</p>
+                          <p class="cafe-item-pending">Quote coming soon.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- ADRIAN -->
+                    <div class="curator-profile" onclick="trackCuratorClick('Adrian')">
+                      <div class="curator-header-row">
+                        <div class="curator-initials">A</div>
+                        <div class="curator-meta">
+                          <h3 class="curator-name">Adrian</h3>
+                          <p class="curator-descriptor">Runs The Station. Opened the door
+                            for group runs.</p>
+                          <div class="curator-footer-row">
+                            <span class="curator-territory-pill">Sheung Wan</span>
+                            <span class="curator-pick-count">1 pick</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="curator-cafes">
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('The Station Café','Adrian')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">The Station Café</span>
+                            <span class="cafe-item-location-pill">Sheung Wan</span>
+                          </div>
+                          <p class="cafe-item-quote">"Ethiopian × Indonesian blend. Proper
+                            specialty. 5% off if you run before coffee."</p>
+                          <a href="https://share.google/YodkopCWftkj2Y1mj" target="_blank"
+                            class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('The Station Café','Adrian',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- JT -->
+                    <div class="curator-profile" onclick="trackCuratorClick('JT')">
+                      <div class="curator-header-row">
+                        <div class="curator-initials">JT</div>
+                        <div class="curator-meta">
+                          <h3 class="curator-name">JT</h3>
+                          <p class="curator-descriptor">Building the map, one hop
+                            at a time.</p>
+                          <div class="curator-footer-row">
+                            <span class="curator-territory-pill">HK Island</span>
+                            <span class="curator-pick-count">3 picks</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="curator-cafes">
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Soul Coffee & Matcha by IDFC','JT')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Soul Coffee & Matcha by IDFC</span>
+                            <span class="cafe-item-location-pill">Central</span>
+                          </div>
+                          <p class="cafe-item-quote">"Choices of beans, matcha options,
+                            solid wifi for working."</p>
+                          <p class="cafe-item-try">Try: Piccolo</p>
+                          <a href="https://share.google/aa5WcfxbJSOuln8KO" target="_blank"
+                            class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Soul Coffee & Matcha by IDFC',
+                              'JT',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Ninetys Coffee & Roastery','JT')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Ninetys Coffee & Roastery</span>
+                            <span class="cafe-item-location-pill">Central</span>
+                          </div>
+                          <p class="cafe-item-quote">"Good for brunch and formal meetups,
+                            decent table space."</p>
+                          <p class="cafe-item-try">Try: Biscoff Cheesecake</p>
+                          <a href="https://share.google/kQYjNzO6AE1DNcVEk" target="_blank"
+                            class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Ninetys Coffee & Roastery','JT',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Liffee Coffee','JT')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Liffee Coffee</span>
+                            <span class="cafe-item-location-pill">Wanchai</span>
+                          </div>
+                          <p class="cafe-item-quote">"Good for brunch. Lunch set
+                            Steak & Eggs + Hot Beverage $168 — great value."</p>
+                          <a href="https://share.google/Q0WXTS4MiaovGcIiM" target="_blank"
+                            class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Liffee Coffee','JT',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- GOURAB -->
+                    <div class="curator-profile" onclick="trackCuratorClick('Gourab')">
+                      <div class="curator-header-row">
+                        <div class="curator-initials">G</div>
+                        <div class="curator-meta">
+                          <h3 class="curator-name">Gourab</h3>
+                          <p class="curator-descriptor">Atmosphere first.
+                            Mid-Levels adjacent.</p>
+                          <div class="curator-footer-row">
+                            <span class="curator-territory-pill">Central</span>
+                            <span class="curator-pick-count">1 pick</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="curator-cafes">
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Urban Coffee Roasters','Gourab')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Urban Coffee Roasters</span>
+                            <span class="cafe-item-location-pill">Central</span>
+                          </div>
+                          <p class="cafe-item-quote">"The ambience is nice, if you are a
+                            fan of coffee places in Central not too far from the
+                            Mid-Level Escalators."</p>
+                          <a href="https://maps.app.goo.gl/b46dQfV97nn3AoSs7" target="_blank"
+                            class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Urban Coffee Roasters','Gourab',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- EMMA -->
+                    <div class="curator-profile" onclick="trackCuratorClick('Emma')">
+                      <div class="curator-header-row">
+                        <div class="curator-initials">E</div>
+                        <div class="curator-meta">
+                          <h3 class="curator-name">Emma</h3>
+                          <p class="curator-descriptor">Hidden gems and experiences.</p>
+                          <div class="curator-footer-row">
+                            <span class="curator-territory-pill">Wanchai</span>
+                            <span class="curator-pick-count">1 pick</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="curator-cafes">
+                        <div class="curator-cafe-item curator-cafe-item--has-photo"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('H.Coffee & Shop','Emma')">
+                          <img
+                            src="assets/images/cafe-h-coffee.jpg"
+                            class="cafe-item-photo"
+                            alt="Inside H.Coffee & Shop, Wanchai"
+                            loading="lazy"
+                          >
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">H.Coffee & Shop — The Corner</span>
+                            <span class="cafe-item-location-pill">Wanchai</span>
+                          </div>
+                          <p class="cafe-item-quote">"Just went to a joint with friends
+                            today. Quite impressive. Minimum spend $80 per person — so
+                            ideally go for lunch, tea, or dinner."</p>
+                          <a href="https://maps.app.goo.gl/7a6Tk8ff56rq16sDA" target="_blank"
+                            class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('H.Coffee & Shop','Emma',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- JASON -->
+                    <div class="curator-profile curator-profile--activating"
+                      onclick="trackCuratorClick('Jason')">
+                      <div class="curator-header-row">
+                        <div class="curator-initials">J</div>
+                        <div class="curator-meta">
+                          <h3 class="curator-name">Jason</h3>
+                          <p class="curator-descriptor">Local roasters, Wanchai.</p>
+                          <div class="curator-footer-row">
+                            <span class="curator-territory-pill">Wanchai</span>
+                            <span class="curator-pick-count">2 picks</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="curator-cafes">
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Coco Espresso','Jason')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Coco Espresso</span>
+                            <span class="cafe-item-location-pill">Wanchai</span>
+                          </div>
+                          <p class="cafe-item-pending">Quote coming soon.</p>
+                          <a href="https://maps.app.goo.gl/oZdvQSGNe1KLU68Y9" target="_blank"
+                            class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Coco Espresso','Jason',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('窮撚啡 KLF Coffee','Jason')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">窮撚啡 KLF Coffee</span>
+                            <span class="cafe-item-location-pill">Wanchai</span>
+                          </div>
+                          <p class="cafe-item-pending">Quote coming soon.</p>
+                          <a href="https://maps.app.goo.gl/4eBTwj1FqKfVJtRR6" target="_blank"
+                            class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('窮撚啡 KLF Coffee','Jason',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
                 </div>
             </section>
 
-            <section class="section-card-grid">
-                <div class="section-inner">
-                    <h2 class="section-heading">Cafés Discovered by the Community</h2>
-                    <div style="width:48px; height:3px; background-color:#C8956C; border-radius:2px; margin: 8px 0 24px 0;"></div>
-                    <p class="community-picks-label">Picked by people in the community — not an algorithm.</p>
-                    <div class="hoppers-community-cards">
-                        <div class="cafe-grid">
-            <!-- Café 1: 2 1/2 -->
-            <article class="cafe-card" data-cafe="2 1/2" data-recommender="David" onclick="trackCafeClick('2 1/2', 'David')">
-                <div class="cafe-image"><span class="cafe-image-location">Sai Ying Pun</span></div>
-                <div class="cafe-content">
-                    <div class="cafe-header">
-                        <div>
-                            <h3 class="cafe-name">2 1/2</h3>
-                            <p class="cafe-location">📍 David Lane, Sai Ying Pun</p>
-                        </div>
-                        <span class="recommender-badge">Rec by <strong>David</strong></span>
-                    </div>
-                    <div class="cafe-quote">
-                        <p>"Legendary local spot — staff have changed but the vibe has held"</p>
-                        <div class="what-to-try"><span>Try:</span> Their espresso</div>
-                    </div>
-                    <div class="cafe-actions">
-                        <a href="https://share.google/nkqzSJjTDHiq1iXuq" target="_blank" class="btn btn-primary" onclick="trackDirectionsClick('2 1/2', 'David', event)">Get Directions</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Café 2: Oma Specialty Coffee -->
-            <article class="cafe-card" data-cafe="Oma Specialty Coffee" data-recommender="Clarence" onclick="trackCafeClick('Oma Specialty Coffee', 'Clarence')">
-                <div class="cafe-image"><span class="cafe-image-location">Tai Hang</span></div>
-                <div class="cafe-content">
-                    <div class="cafe-header">
-                        <div>
-                            <h3 class="cafe-name">Oma Specialty Coffee</h3>
-                            <p class="cafe-location">📍 Tai Hang</p>
-                        </div>
-                        <span class="recommender-badge">Rec by <strong>Clarence</strong></span>
-                    </div>
-                    <div class="cafe-quote">
-                        <p>"Specialist roastery — Geisha varietals, top-notch espresso"</p>
-                        <div class="what-to-try"><span>Try:</span> Their espresso</div>
-                    </div>
-                    <div class="cafe-actions">
-                        <a href="https://share.google/cfRW4tBXXd4j64vGP" target="_blank" class="btn btn-primary" onclick="trackDirectionsClick('Oma Specialty Coffee', 'Clarence', event)">Get Directions</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Café 3: Soul Coffee & Matcha -->
-            <article class="cafe-card" data-cafe="Soul Coffee & Matcha by IDFC" data-recommender="JT" onclick="trackCafeClick('Soul Coffee & Matcha by IDFC', 'JT')">
-                <div class="cafe-image"><span class="cafe-image-location">Central</span></div>
-                <div class="cafe-content">
-                    <div class="cafe-header">
-                        <div>
-                            <h3 class="cafe-name">Soul Coffee & Matcha by IDFC</h3>
-                            <p class="cafe-location">📍 Graham Street, Central</p>
-                        </div>
-                        <span class="recommender-badge">Rec by <strong>JT</strong></span>
-                    </div>
-                    <div class="cafe-quote">
-                        <p>"Good bean selection, matcha options, solid wifi for working"</p>
-                        <div class="what-to-try"><span>Try:</span> Piccolo</div>
-                    </div>
-                    <div class="cafe-actions">
-                        <a href="https://share.google/aa5WcfxbJSOuln8KO" target="_blank" class="btn btn-primary" onclick="trackDirectionsClick('Soul Coffee & Matcha by IDFC', 'JT', event)">Get Directions</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Café 4: Ninetys Coffee & Roastery -->
-            <article class="cafe-card" data-cafe="Ninetys Coffee & Roastery" data-recommender="JT" onclick="trackCafeClick('Ninetys Coffee & Roastery', 'JT')">
-                <div class="cafe-image"><span class="cafe-image-location">Central</span></div>
-                <div class="cafe-content">
-                    <div class="cafe-header">
-                        <div>
-                            <h3 class="cafe-name">Ninetys Coffee & Roastery</h3>
-                            <p class="cafe-location">📍 New World Tower, Central</p>
-                        </div>
-                        <span class="recommender-badge">Rec by <strong>JT</strong></span>
-                    </div>
-                    <div class="cafe-quote">
-                        <p>"Good for brunch and formal meetups, decent table space"</p>
-                        <div class="what-to-try"><span>Try:</span> Biscoff Cheesecake</div>
-                    </div>
-                    <div class="cafe-actions">
-                        <a href="https://share.google/kQYjNzO6AE1DNcVEk" target="_blank" class="btn btn-primary" onclick="trackDirectionsClick('Ninetys Coffee & Roastery', 'JT', event)">Get Directions</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Café 5: Liffee Coffee -->
-            <article class="cafe-card" data-cafe="Liffee Coffee" data-recommender="JT" onclick="trackCafeClick('Liffee Coffee', 'JT')">
-                <div class="cafe-image"><span class="cafe-image-location">Wanchai</span></div>
-                <div class="cafe-content">
-                    <div class="cafe-header">
-                        <div>
-                            <h3 class="cafe-name">Liffee Coffee</h3>
-                            <p class="cafe-location">📍 Wanchai (next to Blue House)</p>
-                        </div>
-                        <span class="recommender-badge">Rec by <strong>JT</strong></span>
-                    </div>
-                    <div class="cafe-quote">
-                        <p>"Good for brunch, great value lunch set"</p>
-                        <div class="what-to-try"><span>Try:</span> Steak & Eggs + Hot Beverage lunch set ($168)</div>
-                    </div>
-                    <div class="cafe-actions">
-                        <a href="https://share.google/Q0WXTS4MiaovGcIiM" target="_blank" class="btn btn-primary" onclick="trackDirectionsClick('Liffee Coffee', 'JT', event)">Get Directions</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Café 6: Rhino Kitchen -->
-            <article class="cafe-card" data-cafe="Rhino Kitchen" data-recommender="Angie" onclick="trackCafeClick('Rhino Kitchen', 'Angie')">
-                <div class="cafe-image"><span class="cafe-image-location">Sai Wan Ho</span></div>
-                <div class="cafe-content">
-                    <div class="cafe-header">
-                        <div>
-                            <h3 class="cafe-name">Rhino Kitchen</h3>
-                            <p class="cafe-location">📍 Holy Cross Path, Sai Wan Ho</p>
-                        </div>
-                        <span class="recommender-badge">Rec by <strong>Angie</strong></span>
-                    </div>
-                    <div class="cafe-quote">
-                        <p>"Good coffee and food! Food is also priced pretty decent compared to central and west! Also has high chairs for babies and a small outdoor area (two tables) for those visiting with pets 🫶"</p>
-                    </div>
-                    <div class="cafe-actions">
-                        <a href="https://www.google.com/search?q=rhino+cafe+sai+wan+ho&client=ms-android-samsung-ss&sca_esv=d36697531cc09700&cs=0&sxsrf=ANbL-n5D-IaG9HHm5XmzAMqTyYu7ivdDBg%3A1775999652570&ei=pJrbaYC7Is-l2roP_7regAo&biw=1440&bih=731&oq=rhino+coffee+sai+wan&gs_lp=Egxnd3Mtd2l6LXNlcnAiFHJoaW5vIGNvZmZlZSBzYWkgd2FuKgIIADIGEAAYFhgeMggQABiABBiiBDIIEAAYgAQYogQyBRAAGO8FMggQABiABBiiBDIFEAAY7wVIgVBQmglY-UZwAXgBkAEAmAHvBaABwimqAQ4wLjExLjMuMS4xLjIuMbgBA8gBAPgBAZgCFKACkyrCAgoQABiwAxjWBBhHwgIUEC4YgAQYkQIYxwEYigUYjgUYrwHCAgsQABiABBiRAhiKBcICChAuGIAEGEMYigXCAgUQLhiABMICCxAuGIAEGNEDGMcBwgIFEAAYgATCAiMQLhiABBiRAhjHARiKBRiOBRivARiXBRjcBBjeBBjgBNgBAcICChAAGIAEGEMYigXCAgcQABiABBgKwgILEC4YgAQYxwEYrwGYAwCIBgGQBgi6BgYIARABGBSSBwwxLjEwLjMuMi4yLjKgB5SVAbIHDDAuMTAuMy4yLjIuMrgHjyrCBwYwLjEyLjjIBzyACAA&sclient=gws-wiz-serp" target="_blank" class="btn btn-primary" onclick="trackDirectionsClick('Rhino Kitchen', 'Angie', event)">Get Directions</a>
-                    </div>
-                </div>
-            </article>
-                        </div>
-                    </div>
-                </div>
+            <!-- WHATSAPP CTA -->
+            <section class="section-whatsapp-cta">
+              <p style="font-family:Inter,sans-serif;font-size:15px;color:#3D3D3D;
+                 margin:0 0 20px 0;">
+                Exploring HK's café scene? Come find us on WhatsApp.
+              </p>
+              <a href="https://chat.whatsapp.com/IEDGaAcOyh9Cf5mApGQ5ds"
+                onclick="trackWhatsAppJoin()"
+                style="display:inline-block;background-color:#25D366;color:#ffffff;
+                font-family:Inter,sans-serif;font-size:16px;font-weight:500;
+                padding:14px 32px;border-radius:50px;text-decoration:none;
+                letter-spacing:0.3px;box-shadow:0 4px 14px rgba(37,211,102,0.35);">
+                Join the Café Hoppers Community on WhatsApp
+              </a>
             </section>
 
+            <!-- COMMUNITY DISCOVERIES -->
+            <section class="section-discoveries">
+              <div class="section-inner">
+                <h2 class="section-heading">Community Discoveries</h2>
+                <div style="width:48px; height:3px; background-color:#C8956C;
+                     border-radius:2px; margin: 8px 0 24px 0;"></div>
+                <p style="font-family:Inter,sans-serif;font-size:14px;
+                   font-style:italic;color:#666666;margin:0 0 28px 0;">
+                  One new find each month — named to whoever found it.
+                </p>
+                <div class="discovery-spotlight">
+                  <p class="discovery-month-label">This month — May 2026</p>
+                  <h3 class="discovery-cafe-name">Milligram Coffee</h3>
+                  <p class="discovery-location">📍 Central</p>
+                  <p class="discovery-quote">"Well-prepped espresso, good extraction,
+                    well balanced, and great Japanese style decor inside."</p>
+                  <p class="discovery-credit">Found by Michael</p>
+                  <a href="https://maps.app.goo.gl/GtfwgcfWUtbozhd97" target="_blank"
+                    class="discovery-directions"
+                    onclick="trackDirectionsClick('Milligram Coffee','Michael',event)">
+                    Get Directions →
+                  </a>
+                </div>
+              </div>
+            </section>
+
+
+            <!-- MAP — DO NOT MODIFY ANYTHING IN THIS SECTION -->
             <section class="section-map">
                 <div class="section-inner">
                     <hr class="map-section-separator">
-                    <div class="map-content-wrapper">
-                    <p class="map-embed-caption">All community-recommended spots, mapped.</p>
+                    <p class="map-embed-caption">All community-recommended spots,
+                        mapped.</p>
                     <div style="width:100%; border-radius:16px; overflow:hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.10);">
-                    <iframe src="https://www.google.com/maps/d/embed?mid=1YMElzGlLqixt2MrpxP6aObntkjSTPFA&ehbc=2E312F" width="100%" height="480" style="display:block; border:0;" allowfullscreen="" loading="lazy"></iframe>
-<script>
-(function() {
-  var mapFrame = document.querySelector('iframe[src*="google.com/maps/d/embed"]');
-  if (mapFrame) {
-    mapFrame.addEventListener('load', function() {
-      if (typeof gtag === 'function') {
-        gtag('event', 'map_loaded', {
-          'event_category': 'Community Map',
-          'event_label': 'Cafe Hoppers Map'
-        });
-      }
-    });
-  }
-})();
-</script>
-                    </div>
+                    <iframe
+                        src="https://www.google.com/maps/d/embed?mid=1YMElzGlLqixt2MrpxP6aObntkjSTPFA&ehbc=2E312F"
+                        width="100%" height="480"
+                        style="display:block;border:0;"
+                        allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <script>
+                    (function() {
+                      var mapFrame = document.querySelector(
+                        'iframe[src*="google.com/maps/d/embed"]');
+                      if (mapFrame) {
+                        mapFrame.addEventListener('load', function() {
+                          if (typeof gtag === 'function') {
+                            gtag('event', 'map_loaded', {
+                              'event_category': 'Community Map',
+                              'event_label': 'Cafe Hoppers Map'
+                            });
+                          }
+                        });
+                      }
+                    })();
+                    </script>
                     </div>
                 </div>
             </section>
 
-            <div class="hoppers-page-tail">
-                <div class="section-inner">
-                <!-- Video Section -->
-                <div class="content-block" style="margin-bottom:56px;">
-                    <h2 class="section-heading">Explore with the Community</h2>
-                    <div style="width:48px; height:3px; background-color:#C8956C; border-radius:2px; margin: 8px 0 24px 0;"></div>
-                    <p class="form-intro" style="max-width: 100%;">People share new spots, ask for recs, and plan café crawls in the WhatsApp group. The map above keeps growing when someone adds a place worth the trip.</p>
-                </div>
 
-                <!-- Embedded Form -->
-                <div class="content-block" style="margin-bottom:56px;">
-                    <h2 class="section-heading">Join the Conversation</h2>
-                    <div style="width:48px; height:3px; background-color:#C8956C; border-radius:2px; margin: 8px 0 24px 0;"></div>
-                    <p class="form-intro">New finds, tasting notes, and crawl ideas land in WhatsApp first. If we add a short interest form later, it will live here.</p>
-                    <div class="form-wrapper">
-                        <!-- Placeholder Airtable or Tally form embed - Replace with your actual form URL -->
-                    </div>
-                </div>
-                </div>
-            </div>
         </section>
     </main>
 
@@ -550,25 +914,30 @@ gtag('config', 'G-WK983SLBZX');
     </footer>
 
     <script>
-        function trackCafeClick(cafeName, recommender) {
-            gtag('event', 'cafe_card_click', {
-                'cafe_name': cafeName,
-                'recommender': recommender
-            });
-        }
-        function trackDirectionsClick(cafeName, recommender, e) {
-            if (e) e.stopPropagation();
-            gtag('event', 'get_directions_click', {
-                'cafe_name': cafeName,
-                'recommender': recommender
-            });
-        }
-        function trackWhatsAppJoin() {
-            gtag('event', 'whatsapp_join_click', {
-                'location': 'cafe_hoppers_page'
-            });
-        }
-    </script>
+function trackCafeClick(cafeName, recommender) {
+  gtag('event', 'cafe_card_click', {
+    'cafe_name': cafeName,
+    'recommender': recommender
+  });
+}
+function trackDirectionsClick(cafeName, recommender, e) {
+  if (e) e.stopPropagation();
+  gtag('event', 'get_directions_click', {
+    'cafe_name': cafeName,
+    'recommender': recommender
+  });
+}
+function trackWhatsAppJoin() {
+  gtag('event', 'whatsapp_join_click', {
+    'location': 'cafe_hoppers_page'
+  });
+}
+function trackCuratorClick(curatorName) {
+  gtag('event', 'curator_profile_click', {
+    'curator_name': curatorName
+  });
+}
+</script>
     <script src="script.js"></script>
 </body>
 </html>
