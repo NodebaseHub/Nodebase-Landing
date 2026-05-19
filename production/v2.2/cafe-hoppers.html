@@ -334,6 +334,37 @@ main p {
   object-position: center;
   border-radius: 0;
 }
+
+.discovery-event {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #E8E4DE;
+}
+.discovery-event-label {
+  display: block;
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #C9A962;
+  margin: 0 0 6px 0;
+}
+.discovery-event-details {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1A1A1A;
+  margin: 0 0 8px 0;
+  line-height: 1.5;
+}
+.discovery-event-note {
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  color: #888888;
+  font-style: italic;
+  margin: 0 0 10px 0;
+}
     </style>
 </head>
 <body>
@@ -642,17 +673,17 @@ main p {
                     </div>
 
                     <!-- SHARON -->
-                    <div class="curator-profile curator-profile--activating"
+                    <div class="curator-profile"
                       onclick="trackCuratorClick('Sharon')">
                       <div class="curator-header-row">
                         <div class="curator-initials">S</div>
                         <div class="curator-meta">
                           <h3 class="curator-name">Sharon</h3>
-                          <p class="curator-descriptor">Finds the friendly, unusual,
-                            and just-opened.</p>
+                          <p class="curator-descriptor">First through the door on
+                            opening day. Champions local businesses.</p>
                           <div class="curator-footer-row">
-                            <span class="curator-territory-pill">Hong Kong</span>
-                            <span class="curator-pick-count">1 pick</span>
+                            <span class="curator-territory-pill">Happy Valley</span>
+                            <span class="curator-pick-count">2 picks</span>
                           </div>
                         </div>
                       </div>
@@ -666,6 +697,24 @@ main p {
                             chef painted the exterior, extremely friendly. Visited on
                             opening day."</p>
                           <p class="cafe-item-pending">Quote coming soon.</p>
+                        </div>
+
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('HFT Life','Sharon')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">HFT Life</span>
+                            <span class="cafe-item-location-pill">Happy Valley</span>
+                          </div>
+                          <p class="cafe-item-quote">"It's a nice place to be —
+                            quiet and good to create artwork. Health conscious vibe.
+                            Coffee and snack combo for $40."</p>
+                          <a href="https://share.google/3zCoPkusuInICUSGI"
+                            target="_blank" class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('HFT Life','Sharon',event)">
+                            Get Directions →
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -823,11 +872,27 @@ main p {
                         </div>
                       </div>
                       <div class="curator-cafes">
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('The Hunt','Emma')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">The Hunt</span>
+                            <span class="cafe-item-location-pill">Kwun Tong</span>
+                          </div>
+                          <p class="cafe-item-quote">"My personal favourite."</p>
+                          <a href="https://share.google/U7ap8m4E7DGn59BWc"
+                            target="_blank" class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('The Hunt','Emma',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+
                         <div class="curator-cafe-item curator-cafe-item--has-photo"
                           onclick="event.stopPropagation();
                             trackCafeClick('H.Coffee & Shop','Emma')">
                           <img
-                            src="assets/images/cafe-h-coffee.jpg"
+                            src="assets/images/cafe-h-coffee.jpeg"
                             class="cafe-item-photo"
                             alt="Inside H.Coffee & Shop, Wanchai"
                             loading="lazy"
@@ -846,27 +911,11 @@ main p {
                             Get Directions →
                           </a>
                         </div>
-
-                        <div class="curator-cafe-item"
-                          onclick="event.stopPropagation();
-                            trackCafeClick('The Hunt','Emma')">
-                          <div class="cafe-item-header">
-                            <span class="cafe-item-name">The Hunt</span>
-                            <span class="cafe-item-location-pill">Kwun Tong</span>
-                          </div>
-                          <p class="cafe-item-quote">"My personal favourite."</p>
-                          <a href="https://share.google/U7ap8m4E7DGn59BWc"
-                            target="_blank" class="cafe-item-directions"
-                            onclick="event.stopPropagation();
-                              trackDirectionsClick('The Hunt','Emma',event)">
-                            Get Directions →
-                          </a>
-                        </div>
                       </div>
                     </div>
 
                     <!-- JASON -->
-                    <div class="curator-profile curator-profile--activating"
+                    <div class="curator-profile"
                       onclick="trackCuratorClick('Jason')">
                       <div class="curator-header-row">
                         <div class="curator-initials">J</div>
@@ -1021,11 +1070,25 @@ main p {
                   <p class="discovery-quote">"Well-prepped espresso, good extraction,
                     well balanced, and great Japanese style decor inside."</p>
                   <p class="discovery-credit">Found by Michael</p>
-                  <a href="https://maps.app.goo.gl/GtfwgcfWUtbozhd97" target="_blank"
+                  <a href="https://share.google/tFmnNDIGKFke8ce0i" target="_blank"
                     class="discovery-directions"
                     onclick="trackDirectionsClick('Milligram Coffee','Michael',event)">
                     Get Directions →
                   </a>
+                  <div class="discovery-event">
+                    <span class="discovery-event-label">Next gathering</span>
+                    <p class="discovery-event-details">Saturday 23 May
+                      &middot; 10:30am &middot; Milligram Coffee, Central</p>
+                    <p class="discovery-event-note">~15 seats. Costa Rican
+                      Red Honey processed beans.</p>
+                    <a href="https://chat.whatsapp.com/IEDGaAcOyh9Cf5mApGQ5ds"
+                      target="_blank"
+                      onclick="trackWhatsAppJoin()"
+                      style="font-family:Inter,sans-serif; font-size:12px;
+                      font-weight:600; color:#25D366; text-decoration:none;">
+                      RSVP in WhatsApp →
+                    </a>
+                  </div>
                 </div>
               </div>
             </section>
