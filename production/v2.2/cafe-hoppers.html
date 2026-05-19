@@ -323,14 +323,16 @@ main p {
 .curator-cafe-item--has-photo {
   padding-top: 0;
   overflow: hidden;
+  border-radius: 10px;
 }
 .cafe-item-photo {
+  display: block;
   width: calc(100% + 32px);
-  margin: 0 -16px 12px -16px;
+  margin: 0 -16px 14px -16px;
   height: 160px;
   object-fit: cover;
-  border-radius: 8px 8px 0 0;
-  display: block;
+  object-position: center;
+  border-radius: 0;
 }
     </style>
 </head>
@@ -396,7 +398,7 @@ main p {
                           <p class="curator-descriptor">Sets a high bar. Arabica purist.</p>
                           <div class="curator-footer-row">
                             <span class="curator-territory-pill">Sai Ying Pun</span>
-                            <span class="curator-pick-count">1 pick</span>
+                            <span class="curator-pick-count">4 picks</span>
                           </div>
                         </div>
                       </div>
@@ -417,6 +419,64 @@ main p {
                             Get Directions →
                           </a>
                         </div>
+
+                        <div class="curator-cafe-item curator-cafe-item--has-photo"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Café Lavande','David')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Café Lavande</span>
+                            <span class="cafe-item-location-pill">Hong Kong</span>
+                          </div>
+                          <p class="cafe-item-quote">"This place has more Italian style
+                            coffee. Also, nice and quiet."</p>
+                          <a href="https://share.google/6bMD2GBnbx5Qn1BzI"
+                            target="_blank" class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Café Lavande','David',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+
+                        <div class="curator-cafe-item curator-cafe-item--has-photo"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Halfway Coffee Sheung Wan','David')">
+                          <img src="assets/images/halfway-coffee-sheungwan.jpg"
+                            class="cafe-item-photo"
+                            alt="Halfway Coffee, Sheung Wan"
+                            loading="lazy">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Halfway Coffee</span>
+                            <span class="cafe-item-location-pill">Sheung Wan</span>
+                          </div>
+                          <p class="cafe-item-pending">Quote coming soon.</p>
+                          <a href="https://maps.app.goo.gl/QKvfgJhpCrBdJjc46"
+                            target="_blank" class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Halfway Coffee Sheung Wan','David',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+
+                        <div class="curator-cafe-item curator-cafe-item--has-photo"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Halfway Coffee Mid-Levels','David')">
+                          <img src="assets/images/halfway-coffee-midlevels.jpg"
+                            class="cafe-item-photo"
+                            alt="Halfway Coffee, Mid-Levels"
+                            loading="lazy">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Halfway Coffee</span>
+                            <span class="cafe-item-location-pill">Mid-Levels</span>
+                          </div>
+                          <p class="cafe-item-quote">"Really cool, but will be too hot
+                            soon. Great coffee."</p>
+                          <a href="https://share.google/JVpPm6sso52pSCiz7"
+                            target="_blank" class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Halfway Coffee Mid-Levels','David',event)">
+                            Get Directions →
+                          </a>
+                        </div>
                       </div>
                     </div>
 
@@ -430,7 +490,7 @@ main p {
                             Oma regular since 2017.</p>
                           <div class="curator-footer-row">
                             <span class="curator-territory-pill">Tai Hang</span>
-                            <span class="curator-pick-count">1 pick</span>
+                            <span class="curator-pick-count">2 picks</span>
                           </div>
                         </div>
                       </div>
@@ -452,6 +512,24 @@ main p {
                             Get Directions →
                           </a>
                         </div>
+
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Whiskers & Paws','Clarence')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Whiskers & Paws</span>
+                            <span class="cafe-item-location-pill">Ap Lei Chau</span>
+                          </div>
+                          <p class="cafe-item-quote">"The coffee shop at Whiskers and
+                            Paws in Horizon Plaza, Ap Lei Chau. Less so about the coffee,
+                            more so about the doggie vibes."</p>
+                          <a href="https://share.google/5hUZCo9h78NlOc4xB"
+                            target="_blank" class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Whiskers & Paws','Clarence',event)">
+                            Get Directions →
+                          </a>
+                        </div>
                       </div>
                     </div>
 
@@ -461,8 +539,8 @@ main p {
                         <div class="curator-initials">A</div>
                         <div class="curator-meta">
                           <h3 class="curator-name">Angie</h3>
-                          <p class="curator-descriptor">East HK Island. Family-friendly
-                            and worth the trip.</p>
+                          <p class="curator-descriptor">Checks for high chairs before
+                            she sits down.</p>
                           <div class="curator-footer-row">
                             <span class="curator-territory-pill">Sai Wan Ho</span>
                             <span class="curator-pick-count">1 pick</span>
@@ -504,9 +582,13 @@ main p {
                         </div>
                       </div>
                       <div class="curator-cafes">
-                        <div class="curator-cafe-item"
+                        <div class="curator-cafe-item curator-cafe-item--has-photo"
                           onclick="event.stopPropagation();
                             trackCafeClick('Layback Matters','Dave')">
+                          <img src="assets/images/dave-at-laybackmatters.jpg"
+                            class="cafe-item-photo"
+                            alt="Layback Matters, Sham Shui Po"
+                            loading="lazy">
                           <div class="cafe-item-header">
                             <span class="cafe-item-name">Layback Matters</span>
                             <span class="cafe-item-location-pill">Sham Shui Po</span>
@@ -697,10 +779,10 @@ main p {
                         <div class="curator-initials">G</div>
                         <div class="curator-meta">
                           <h3 class="curator-name">Gourab</h3>
-                          <p class="curator-descriptor">Atmosphere first.
-                            Mid-Levels adjacent.</p>
+                          <p class="curator-descriptor">Crosses the harbour for good
+                            atmosphere. TST-based.</p>
                           <div class="curator-footer-row">
-                            <span class="curator-territory-pill">Central</span>
+                            <span class="curator-territory-pill">Tsim Sha Tsui</span>
                             <span class="curator-pick-count">1 pick</span>
                           </div>
                         </div>
@@ -732,10 +814,11 @@ main p {
                         <div class="curator-initials">E</div>
                         <div class="curator-meta">
                           <h3 class="curator-name">Emma</h3>
-                          <p class="curator-descriptor">Hidden gems and experiences.</p>
+                          <p class="curator-descriptor">Finds hidden gems and
+                            experiences. Knows Kwun Tong better than anyone.</p>
                           <div class="curator-footer-row">
-                            <span class="curator-territory-pill">Wanchai</span>
-                            <span class="curator-pick-count">1 pick</span>
+                            <span class="curator-territory-pill">Kwun Tong</span>
+                            <span class="curator-pick-count">2 picks</span>
                           </div>
                         </div>
                       </div>
@@ -760,6 +843,22 @@ main p {
                             class="cafe-item-directions"
                             onclick="event.stopPropagation();
                               trackDirectionsClick('H.Coffee & Shop','Emma',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('The Hunt','Emma')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">The Hunt</span>
+                            <span class="cafe-item-location-pill">Kwun Tong</span>
+                          </div>
+                          <p class="cafe-item-quote">"My personal favourite."</p>
+                          <a href="https://share.google/U7ap8m4E7DGn59BWc"
+                            target="_blank" class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('The Hunt','Emma',event)">
                             Get Directions →
                           </a>
                         </div>
@@ -808,6 +907,78 @@ main p {
                             class="cafe-item-directions"
                             onclick="event.stopPropagation();
                               trackDirectionsClick('窮撚啡 KLF Coffee','Jason',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="curator-profile"
+                      onclick="trackCuratorClick('Nanette')">
+                      <div class="curator-header-row">
+                        <div class="curator-initials">N</div>
+                        <div class="curator-meta">
+                          <h3 class="curator-name">Nanette</h3>
+                          <p class="curator-descriptor">Finds the neighbourhood
+                            character. Dog-friendly radar.</p>
+                          <div class="curator-footer-row">
+                            <span class="curator-territory-pill">Central</span>
+                            <span class="curator-pick-count">1 pick</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="curator-cafes">
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('EN Coffee','Nanette')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">EN Coffee</span>
+                            <span class="cafe-item-location-pill">Central</span>
+                          </div>
+                          <p class="cafe-item-quote">"Tried the one in Central.
+                            Stop brewing 30 min before closing — so go when you
+                            have time. Pricey but worth it. Always busy, dog
+                            friendly. Perfect if you want to just disappear for
+                            an hour."</p>
+                          <a href="https://maps.app.goo.gl/WrYNJxq2PNHH7q967"
+                            target="_blank" class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('EN Coffee','Nanette',event)">
+                            Get Directions →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="curator-profile"
+                      onclick="trackCuratorClick('Mel K')">
+                      <div class="curator-header-row">
+                        <div class="curator-initials">M</div>
+                        <div class="curator-meta">
+                          <h3 class="curator-name">Mel K</h3>
+                          <p class="curator-descriptor">Honest reviewer. Vibe
+                            matters as much as the beans.</p>
+                          <div class="curator-footer-row">
+                            <span class="curator-territory-pill">Happy Valley</span>
+                            <span class="curator-pick-count">1 pick</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="curator-cafes">
+                        <div class="curator-cafe-item"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Fineprint','Mel K')">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Fineprint</span>
+                            <span class="cafe-item-location-pill">Happy Valley</span>
+                          </div>
+                          <p class="cafe-item-quote">"Coffee is decent, but the
+                            vibe is not for me — a bit too loud, and there are
+                            little flies from the open kitchen."</p>
+                          <a href="https://share.google/lqYCX43VlZLHxAySC"
+                            target="_blank" class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Fineprint','Mel K',event)">
                             Get Directions →
                           </a>
                         </div>
