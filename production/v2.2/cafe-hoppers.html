@@ -218,6 +218,7 @@ main p {
   border-radius: 12px;
   padding: 24px;
   max-width: 520px;
+  border: 1px solid #E0DBD4;
 }
 .discovery-month-label {
   font-family: Inter, sans-serif;
@@ -230,7 +231,7 @@ main p {
 }
 .discovery-cafe-name {
   font-family: Georgia, serif;
-  font-size: 19px;
+  font-size: 22px;
   color: #1A1A1A;
   margin: 0 0 4px 0;
 }
@@ -242,7 +243,7 @@ main p {
 }
 .discovery-quote {
   font-family: Inter, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-style: italic;
   color: #666666;
   margin: 0 0 10px 0;
@@ -352,7 +353,7 @@ main p {
 }
 .discovery-event-details {
   font-family: Inter, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: #1A1A1A;
   margin: 0 0 8px 0;
@@ -364,6 +365,52 @@ main p {
   color: #888888;
   font-style: italic;
   margin: 0 0 10px 0;
+}
+
+/* GATHERINGS GRID */
+.gatherings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+.discovery-past {
+  background: #F8F7F4;
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E0DBD4;
+}
+.discovery-past-photo {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.discovery-past-body {
+  padding: 20px 24px 24px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.discovery-spotlight {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .gatherings-grid {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .discovery-past {
+    flex: 1;
+  }
+  .discovery-spotlight {
+    flex: 1;
+  }
 }
     </style>
 </head>
@@ -1061,9 +1108,36 @@ main p {
                      border-radius:2px; margin: 8px 0 24px 0;"></div>
                 <p style="font-family:Inter,sans-serif;font-size:14px;
                    font-style:italic;color:#666666;margin:0 0 28px 0;">
-                  One new find each month — named to whoever found it.
+                  Named finds and shared moments.
                 </p>
-                <div class="discovery-spotlight">
+                <div class="gatherings-grid">
+                  <div class="discovery-past">
+                    <img src="assets/images/the-station-run.jpg"
+                         class="discovery-past-photo"
+                         alt="The Station café run, Sheung Wan, 10 May"
+                         loading="lazy">
+                    <div class="discovery-past-body">
+                      <p class="discovery-month-label">Last gathering
+                        — 10 May</p>
+                      <h3 class="discovery-cafe-name">Café Run ·
+                        The Station</h3>
+                      <p class="discovery-location">📍 Sheung Wan</p>
+                      <p class="discovery-quote">"Harbour run stretched
+                        to Wanchai — Dave hit a personal best. Ice lattes
+                        and espresso smoothies waiting at Adrian's café
+                        after. Turns out caffeine pulls harder than
+                        the finish line."</p>
+                      <p class="discovery-credit">Hosted by Adrian</p>
+                      <a href="https://share.google/YodkopCWftkj2Y1mj"
+                         target="_blank"
+                         class="discovery-directions"
+                         onclick="trackDirectionsClick(
+                           'The Station Café','Adrian',event)">
+                        The Station Café →
+                      </a>
+                    </div>
+                  </div>
+                  <div class="discovery-spotlight">
                   <p class="discovery-month-label">This month — May 2026</p>
                   <h3 class="discovery-cafe-name">Milligram Coffee</h3>
                   <p class="discovery-location">📍 Central</p>
@@ -1089,6 +1163,7 @@ main p {
                       RSVP in WhatsApp →
                     </a>
                   </div>
+                </div>
                 </div>
               </div>
             </section>
