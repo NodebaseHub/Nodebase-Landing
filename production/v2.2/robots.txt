@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /investor-enquiries.html
+Disallow: /join-the-mission.html

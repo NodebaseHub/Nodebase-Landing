@@ -441,7 +441,7 @@ main p {
     </header>
 
     <!-- Main Content -->
-    <main class="main">
+    <main class="main" id="main-content">
         <section class="page-section" style="padding-top:0;margin-top:0;">
 
             <!-- HERO -->
@@ -481,7 +481,7 @@ main p {
                       </div>
                       <div class="curator-cafes">
                         <div class="curator-cafe-item" onclick="event.stopPropagation();
-                          trackCafeClick('2½','David')">
+                          trackCafeClick('Two-and-a-Half Street','David')">
                           <div class="cafe-item-header">
                             <span class="cafe-item-name">Two-and-a-Half Street</span>
                             <span class="cafe-item-location-pill">西營盤</span>
@@ -669,9 +669,11 @@ main p {
                             <span class="cafe-item-name">Layback Matters</span>
                             <span class="cafe-item-location-pill">深水埗</span>
                           </div>
-                          <p class="cafe-item-quote">"A particularly interesting one is
-                            Layback Matters. They let you decide how much you want to pay
-                            for your coffee. Yes it is true!"</p>
+                          <p class="cafe-item-quote">"A particularly interesting
+                            one is Layback Matters. They let you decide how much
+                            you want to pay for your coffee. Yes it is true! And
+                            they've got a friendly cat — she climbed to my lap and
+                            stayed the whole time. ☕"</p>
                           <a href="https://share.google/3BfAyepbwvwDDV1iA" target="_blank"
                             class="cafe-item-directions"
                             onclick="event.stopPropagation();
@@ -1203,8 +1205,7 @@ main p {
                       <a href="https://share.google/YodkopCWftkj2Y1mj"
                          target="_blank"
                          class="discovery-directions"
-                         onclick="trackDirectionsClick(
-                           'The Station Café','Adrian',event)">
+                         onclick="trackDiscoveryClick('The Station Café','last_gathering',event)">
                         The Station Café →
                       </a>
                     </div>
@@ -1218,7 +1219,7 @@ main p {
                   <p class="discovery-credit">由 Michael 發現</p>
                   <a href="https://share.google/tFmnNDIGKFke8ce0i" target="_blank"
                     class="discovery-directions"
-                    onclick="trackDirectionsClick('Milligram Coffee','Michael',event)">
+                    onclick="trackDiscoveryClick('Milligram Coffee','this_month',event)">
                     查看地圖 →
                   </a>
                   <div class="discovery-event">
@@ -1277,6 +1278,23 @@ main p {
         </section>
     </main>
 
+<script>
+(function() {
+  var tracked = false;
+  window.addEventListener('scroll', function() {
+    if (tracked) return;
+    var scrolled = window.scrollY + window.innerHeight;
+    var total = document.body.scrollHeight;
+    if (scrolled / total >= 0.85) {
+      tracked = true;
+      if (typeof trackScrollDepth === 'function') {
+        trackScrollDepth();
+      }
+    }
+  });
+})();
+</script>
+
     <!-- Footer - Same on all pages -->
     <footer class="footer">
         <div class="container">
@@ -1315,6 +1333,18 @@ function trackWhatsAppJoin() {
 function trackCuratorClick(curatorName) {
   gtag('event', 'curator_profile_click', {
     'curator_name': curatorName
+  });
+}
+function trackDiscoveryClick(cafeName, section, e) {
+  if (e) e.stopPropagation();
+  gtag('event', 'discovery_directions_click', {
+    'cafe_name': cafeName,
+    'section': section
+  });
+}
+function trackScrollDepth() {
+  gtag('event', 'scroll_depth_90', {
+    'page': 'cafe_hoppers'
   });
 }
 </script>
