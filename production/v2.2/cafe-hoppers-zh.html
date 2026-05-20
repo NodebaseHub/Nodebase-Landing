@@ -741,8 +741,12 @@ main p {
                           <p class="cafe-item-quote">"Steamed buns with various fillings,
                             chef painted the exterior, extremely friendly. Visited on
                             opening day."</p>
-                          <!-- PLACEHOLDER: add Google Maps link when listing
-                               is live -->
+                          <a href="https://share.google/zGKjjweeaWh6yZTy7"
+                            target="_blank" class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Joymore','Sharon',event)">
+                            查看地圖 →
+                          </a>
                         </div>
 
                         <div class="curator-cafe-item"
@@ -981,7 +985,7 @@ main p {
                             <span class="cafe-item-name">Coco Espresso</span>
                             <span class="cafe-item-location-pill">灣仔</span>
                           </div>
-                          <p class="cafe-item-pending">評語即將更新。</p>
+                          <p class="cafe-item-quote">"Really good espresso."</p>
                           <a href="https://maps.app.goo.gl/oZdvQSGNe1KLU68Y9" target="_blank"
                             class="cafe-item-directions"
                             onclick="event.stopPropagation();
@@ -996,7 +1000,7 @@ main p {
                             <span class="cafe-item-name">窮撚啡 KLF Coffee</span>
                             <span class="cafe-item-location-pill">灣仔</span>
                           </div>
-                          <p class="cafe-item-pending">評語即將更新。</p>
+                          <p class="cafe-item-quote">"Really good cold brew."</p>
                           <a href="https://maps.app.goo.gl/4eBTwj1FqKfVJtRR6" target="_blank"
                             class="cafe-item-directions"
                             onclick="event.stopPropagation();
@@ -1073,6 +1077,46 @@ main p {
                             target="_blank" class="cafe-item-directions"
                             onclick="event.stopPropagation();
                               trackDirectionsClick('Fineprint','Mel K',event)">
+                            查看地圖 →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="curator-profile"
+                      onclick="trackCuratorClick('Min')">
+                      <div class="curator-header-row">
+                        <div class="curator-initials">Mi</div>
+                        <div class="curator-meta">
+                          <h3 class="curator-name">Min</h3>
+                          <p class="curator-descriptor">從美食社群而來。
+                            第一天就帶來隱世精品咖啡。</p>
+                          <div class="curator-footer-row">
+                            <span class="curator-territory-pill">大坑</span>
+                            <span class="curator-pick-count">1 個推薦</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="curator-cafes">
+                        <div class="curator-cafe-item curator-cafe-item--has-photo"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('SonneCAD Coffee','Min')">
+                          <img src="assets/images/cafe-sonnecad.png"
+                            class="cafe-item-photo"
+                            alt="SonneCAD Coffee, 大坑"
+                            loading="lazy">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">SonneCAD Coffee</span>
+                            <span class="cafe-item-location-pill">大坑</span>
+                          </div>
+                          <p class="cafe-item-quote">"Amazing coffee, roasted,
+                            prepared and served by a Q Grader, Coffee Champ.
+                            Great place for dates, solo."</p>
+                          <a href="https://maps.app.goo.gl/3ujc5mtPWeUZeBoB7"
+                            target="_blank" class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('SonneCAD Coffee',
+                              'Min',event)">
                             查看地圖 →
                           </a>
                         </div>
