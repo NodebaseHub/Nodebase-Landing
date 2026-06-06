@@ -1,6 +1,8 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WK983SLBZX"></script>
 <script>
@@ -10,8 +12,6 @@ gtag('js', new Date());
 gtag('config', 'G-WK983SLBZX');
 </script>
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nodebase Hub | Cafe Hoppers</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -217,7 +217,6 @@ main p {
   background: #F8F7F4;
   border-radius: 12px;
   padding: 24px;
-  max-width: 520px;
   border: 1px solid #E0DBD4;
 }
 .discovery-month-label {
@@ -383,6 +382,7 @@ main p {
   flex-direction: column;
   border: 1px solid #E0DBD4;
 }
+
 .discovery-past-photo {
   width: 100%;
   height: 160px;
@@ -396,9 +396,6 @@ main p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-.discovery-spotlight {
-  flex: 1;
 }
 @media (min-width: 768px) {
   .gatherings-grid {
@@ -442,7 +439,7 @@ main p {
     </header>
 
     <!-- Main Content -->
-    <main class="main" id="main-content">
+    <main class="main">
         <section class="page-section" style="padding-top:0;margin-top:0;">
 
             <!-- HERO -->
@@ -738,7 +735,9 @@ main p {
                         </div>
                       </div>
                       <div class="curator-cafes">
-                        <div class="curator-cafe-item curator-cafe-item--has-photo">
+                        <div class="curator-cafe-item curator-cafe-item--has-photo"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Joymore','Sharon')">
                           <img src="assets/images/joymore.jpg"
                             class="cafe-item-photo"
                             alt="Joymore, King Kwong St"
@@ -1271,7 +1270,7 @@ main p {
             </section>
 
 
-            <!-- MAP — DO NOT MODIFY ANYTHING IN THIS SECTION -->
+            <!-- MAP -->
             <section class="section-map">
                 <div class="section-inner">
                     <hr class="map-section-separator">
@@ -1308,23 +1307,6 @@ main p {
         </section>
     </main>
 
-<script>
-(function() {
-  var tracked = false;
-  window.addEventListener('scroll', function() {
-    if (tracked) return;
-    var scrolled = window.scrollY + window.innerHeight;
-    var total = document.body.scrollHeight;
-    if (scrolled / total >= 0.85) {
-      tracked = true;
-      if (typeof trackScrollDepth === 'function') {
-        trackScrollDepth();
-      }
-    }
-  });
-})();
-</script>
-
     <!-- Footer - Same on all pages -->
     <footer class="footer">
         <div class="container">
@@ -1334,6 +1316,8 @@ main p {
                     <a href="cafe-hoppers.html">Cafe Hoppers</a>
                     <a href="cafe-owners.html">Cafe Owners</a>
                     <a href="contact.html">Contact</a>
+                    <a href="investor-enquiries.html">Investor Enquiries</a>
+                    <a href="join-the-mission.html">Join the Mission</a>
                 </div>
                 <p class="footer-copyright">&copy; 2026 Nodebase. All rights reserved.</p>
                 <a href="privacy.html">Privacy Policy</a>
@@ -1377,6 +1361,20 @@ function trackScrollDepth() {
     'page': 'cafe_hoppers'
   });
 }
+(function() {
+  var tracked = false;
+  window.addEventListener('scroll', function() {
+    if (tracked) return;
+    var scrolled = window.scrollY + window.innerHeight;
+    var total = document.body.scrollHeight;
+    if (scrolled / total >= 0.90) {
+      tracked = true;
+      if (typeof trackScrollDepth === 'function') {
+        trackScrollDepth();
+      }
+    }
+  });
+})();
 </script>
     <script src="script.js"></script>
 </body>
