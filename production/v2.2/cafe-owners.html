@@ -14,9 +14,283 @@ gtag('config', 'G-WK983SLBZX');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nodebase Hub | Cafe Owners</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    /* ── PAGE-LEVEL OVERRIDES ── */
+    .page-cafe-owners .section-heading {
+        margin-top: 0;
+        margin-bottom: 1.25rem;
+    }
+    .page-cafe-owners .content-block {
+        margin-bottom: 4rem;
+    }
+
+    /* ── SECTION RULE (orange underline matching cafe-hoppers) ── */
+    .co-rule {
+        width: 48px;
+        height: 3px;
+        background-color: #C8956C;
+        border-radius: 2px;
+        margin: 0 0 24px 0;
+    }
+
+    /* ── HERO ── */
+    .co-hero {
+        background-color: #F5F0E8;
+        padding: 64px 24px 56px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .co-hero h1 {
+        max-width: 680px;
+        margin: 0 auto 16px;
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: #1A1A1A;
+        letter-spacing: -0.03em;
+        line-height: 1.15;
+        font-family: Georgia, serif;
+    }
+    .co-hero p {
+        max-width: 520px;
+        margin: 0 auto;
+        font-size: 1.125rem;
+        color: #4A4A4A;
+        line-height: 1.7;
+        font-family: Inter, sans-serif;
+    }
+
+    /* ── HOW IT WORKS FLOW ── */
+    .co-flow-box {
+        background-color: #F7F4F0;
+        border-radius: 12px;
+        padding: 22px 28px;
+        margin: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 0;
+        align-items: center;
+    }
+    .co-flow-step {
+        font-family: Inter, sans-serif;
+        font-weight: 600;
+        font-size: 0.93rem;
+        color: #2A2A2A;
+        margin-right: 10px;
+    }
+    .co-flow-arrow {
+        color: #C8956C;
+        font-weight: 700;
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+    .co-no-commission {
+        font-family: Inter, sans-serif;
+        font-size: 0.93rem;
+        color: #5A5A5A;
+        margin-top: 4px;
+    }
+
+    /* ── WHAT THIS MEANS — callout items ── */
+    .co-callouts {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 20px 0 24px;
+    }
+    .co-callout {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        padding: 16px 18px;
+        background: #F8F7F4;
+        border-radius: 10px;
+        border-left: 3px solid #C9A962;
+    }
+    .co-callout-text {
+        font-family: Inter, sans-serif;
+        font-size: 0.97rem;
+        color: #2A2A2A;
+        line-height: 1.6;
+        margin: 0;
+    }
+    .co-callout-text strong {
+        display: block;
+        font-weight: 600;
+        color: #1A1A1A;
+        margin-bottom: 2px;
+    }
+    .co-not-strip {
+        background: transparent;
+        border: 1px solid #E0DBD4;
+        border-radius: 8px;
+        padding: 14px 18px;
+        margin-top: 8px;
+        font-family: Inter, sans-serif;
+        font-size: 0.88rem;
+        color: #777;
+        line-height: 1.6;
+    }
+
+    /* ── PROOF CARDS ── */
+    .co-proof-grid {
+        display: flex;
+        gap: 16px;
+        margin: 20px 0 12px;
+        flex-wrap: wrap;
+    }
+    .co-proof-card {
+        flex: 1;
+        min-width: 260px;
+        background: #F8F7F4;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid #E0DBD4;
+        transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .co-proof-card:hover {
+        box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+        transform: translateY(-2px);
+    }
+    .co-proof-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+    .co-proof-body {
+        padding: 20px 22px 22px;
+    }
+    .co-proof-label {
+        font-family: Inter, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        color: #C9A962;
+        margin: 0 0 6px;
+    }
+    .co-proof-title {
+        font-family: Georgia, serif;
+        font-size: 17px;
+        font-weight: 700;
+        color: #1A1A1A;
+        margin: 0 0 10px;
+        line-height: 1.3;
+    }
+    .co-proof-text {
+        font-family: Inter, sans-serif;
+        font-size: 0.875rem;
+        color: #444;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    /* ── STATS BAR ── */
+    .co-stats {
+        background-color: #1A1A1A;
+        border-radius: 14px;
+        padding: 40px 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        margin: 32px 0;
+        flex-wrap: wrap;
+    }
+    .co-stat {
+        flex: 1;
+        min-width: 160px;
+        text-align: center;
+        padding: 0 24px;
+    }
+    .co-stat + .co-stat {
+        border-left: 1px solid #333;
+    }
+    .co-stat-num {
+        font-family: Georgia, serif;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #C8956C;
+        margin: 0;
+        line-height: 1;
+        letter-spacing: -0.02em;
+    }
+    .co-stat-label {
+        font-family: Inter, sans-serif;
+        font-size: 0.8rem;
+        color: #AAAAAA;
+        margin: 10px 0 0;
+        letter-spacing: 0.5px;
+    }
+
+    /* ── CTA SECTION ── */
+    .co-cta {
+        background-color: #F5F0E8;
+        border-radius: 16px;
+        padding: 56px 32px;
+        text-align: center;
+        margin: 20px 0 40px;
+    }
+    .co-cta h2 {
+        font-family: Georgia, serif;
+        font-size: 1.85rem;
+        font-weight: 700;
+        color: #1A1A1A;
+        margin: 0 0 14px;
+        letter-spacing: -0.02em;
+        line-height: 1.25;
+    }
+    .co-cta p {
+        font-family: Inter, sans-serif;
+        font-size: 1rem;
+        color: #4A4A4A;
+        max-width: 400px;
+        margin: 0 auto 28px;
+        line-height: 1.65;
+    }
+    .co-wa-btn {
+        display: inline-block;
+        background-color: #25D366;
+        color: #ffffff;
+        font-family: Inter, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 15px 36px;
+        border-radius: 50px;
+        text-decoration: none;
+        letter-spacing: 0.2px;
+        box-shadow: 0 4px 16px rgba(37,211,102,0.38);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .co-wa-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(37,211,102,0.45);
+    }
+
+    /* ── SEE WHO LINK ── */
+    .co-see-link {
+        font-family: Inter, sans-serif;
+        color: #C9A962;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+    .co-see-link:hover { color: #B8984F; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 640px) {
+        .co-hero h1 { font-size: 2rem; }
+        .co-stat + .co-stat { border-left: none; border-top: 1px solid #333; padding-top: 24px; }
+        .co-stats { gap: 16px; }
+        .co-cta { padding: 40px 20px; }
+        .co-cta h2 { font-size: 1.5rem; }
+    }
+    </style>
 </head>
 <body class="page-cafe-owners">
-    <!-- Header Navigation - Same on all pages -->
+
+    <!-- Header Navigation -->
     <header class="header">
         <div class="container">
             <div class="nav-wrapper">
@@ -34,108 +308,132 @@ gtag('config', 'G-WK983SLBZX');
                     <a href="cafe-owners.html" class="nav-link primary-path active">Cafe Owners</a>
                     <a href="contact.html" class="nav-link">Contact</a>
                     <div class="lang-toggle">
-                        <a href="cafe-owners.html" style="font-weight: 700; color: #1A1A1A;">EN</a> | <a href="cafe-owners-zh.html" style="font-weight: 400; color: #999999;">繁</a>
+                        <a href="cafe-owners.html" style="font-weight:700; color:#1A1A1A;">EN</a> | <a href="cafe-owners-zh.html" style="font-weight:400; color:#999999;">繁</a>
                     </div>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="main">
-        <section class="page-section">
-            <div class="container container-content">
-                <div style="background-color: #F5F0E8; padding: 60px 24px 48px 24px; text-align: center; margin-bottom: 40px;">
-                  <h1 class="page-heading" style="text-align: center; max-width: 720px; margin-left: auto; margin-right: auto;">Your next regular is already looking for you.</h1>
-                  <p class="lead-text" style="text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">Nodebase connects independent cafés with a growing community of engaged café hoppers in Hong Kong — people who discover places through trusted word-of-mouth, not algorithms.</p>
-                </div>
+     <section class="page-section">
+      <div class="container container-content">
 
-                <div class="content-block">
-                  <h2 class="section-heading">How it works</h2>
-                  <p>Someone in our community visits your café. They share it back to the group. Other members see a real recommendation from a real person — and come find you.</p>
-                  <div style="background-color: #F7F4F0; border-radius: 12px; padding: 24px 32px; margin: 24px 0; font-size: 0.95rem; color: #3A3A3A; line-height: 2;">
-                    <span style="font-weight: 600;">Community member recommends your café</span>
-                    <span style="color: #C8956C; font-weight: 700; margin: 0 12px;">→</span>
-                    <span style="font-weight: 600;">Café hoppers visit</span>
-                    <span style="color: #C8956C; font-weight: 700; margin: 0 12px;">→</span>
-                    <span style="font-weight: 600;">Visit gets shared back</span>
-                    <span style="color: #C8956C; font-weight: 700; margin: 0 12px;">→</span>
-                    <span style="font-weight: 600;">More hoppers discover you</span>
-                  </div>
-                  <p>This is community-driven discovery. No paid placement. No commission taken. No algorithm deciding whether you appear today or not.</p>
-                </div>
+       <!-- HERO -->
+       <div class="co-hero">
+        <h1>Your next regular is already<br>looking for you.</h1>
+        <p>A growing community of café hoppers in Hong Kong, discovering independent cafés through real word-of-mouth.</p>
+       </div>
 
-                <!-- Benefits Explanation -->
-                <div class="content-block">
-                  <p class="lead-text">Running an independent café in Hong Kong today takes more than great coffee.</p>
-                  <p>Delivery platform commissions keep rising. Margins keep shrinking. And the customers who genuinely care about what you do — who come for the craft, not the discount — are hard to reach and harder to hold on to.</p>
-                  <p>Delivery apps give you transactions. They don't give you relationships.</p>
-                </div>
+       <!-- HOW IT WORKS -->
+       <div class="content-block" style="margin-top:3rem;">
+        <h2 class="section-heading">How it works</h2>
+        <div class="co-rule"></div>
+        <p>Someone in our community visits your café. They tell the group. Others come find you.</p>
+        <div class="co-flow-box">
+         <span class="co-flow-step">Community member recommends your café</span>
+         <span class="co-flow-arrow">→</span>
+         <span class="co-flow-step">Café hoppers visit</span>
+         <span class="co-flow-arrow">→</span>
+         <span class="co-flow-step">Visit gets shared back</span>
+         <span class="co-flow-arrow">→</span>
+         <span class="co-flow-step" style="margin-right:0;">More hoppers discover you</span>
+        </div>
+        <p class="co-no-commission">No paid placement. No commission. No algorithm deciding whether you appear.</p>
+       </div>
 
-                <!-- Where Nodebase fits -->
-                <div class="content-block">
-                  <h2 class="section-heading">Where Nodebase fits</h2>
-                  <p>Nodebase is a community-first café discovery platform built for independent cafés in Hong Kong. We are not a delivery app. We are not a review site. We are not another platform taking a cut of your revenue.</p>
-                  <p>We are building a community of people who actively seek out independent cafés — and share what they find with each other. People who visit because someone they trust recommended it. People who come back.</p>
-                  <p>What that means for your café:</p>
-                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;">
-                    <div style="background: #F7F4F0; border-radius: 10px; padding: 20px 24px;">
-                      <p style="margin: 0; font-size: 0.95rem; color: #3A3A3A;">Genuine discovery from people already looking for places like yours</p>
-                    </div>
-                    <div style="background: #F7F4F0; border-radius: 10px; padding: 20px 24px;">
-                      <p style="margin: 0; font-size: 0.95rem; color: #3A3A3A;">Word-of-mouth that travels further than your immediate neighbourhood</p>
-                    </div>
-                    <div style="background: #F7F4F0; border-radius: 10px; padding: 20px 24px;">
-                      <p style="margin: 0; font-size: 0.95rem; color: #3A3A3A;">A direct relationship with customers who care about independent cafés</p>
-                    </div>
-                    <div style="background: #F7F4F0; border-radius: 10px; padding: 20px 24px;">
-                      <p style="margin: 0; font-size: 0.95rem; color: #3A3A3A;">Visibility that isn't dependent on ad spend or platform ranking</p>
-                    </div>
-                  </div>
-                  <style>
-                  @media (max-width: 600px) {
-                    .benefit-grid { grid-template-columns: 1fr !important; }
-                  }
-                  </style>
-                  <p>Nodebase works alongside what you already do. It builds the layer that delivery platforms never could: a real community that genuinely wants independent cafés to thrive.</p>
-                </div>
+       <!-- WHAT THIS ACTUALLY MEANS -->
+       <div class="content-block">
+        <h2 class="section-heading">What this actually means for your café</h2>
+        <div class="co-rule"></div>
+        <div class="co-callouts">
+         <div class="co-callout">
+          <p class="co-callout-text">
+           <strong>Customers who came because someone they trust sent them.</strong>
+           Not an algorithm showing a discount. Not a paid ad. A real person said it was worth the trip.
+          </p>
+         </div>
+         <div class="co-callout">
+          <p class="co-callout-text">
+           <strong>Your café on the community map because someone went and liked it.</strong>
+           Every pin has a name behind it. No scraped listings. No auto-generated content.
+          </p>
+         </div>
+         <div class="co-callout">
+          <p class="co-callout-text">
+           <strong>Visibility that doesn't depend on ad spend or platform ranking.</strong>
+           Community-driven discovery compounds over time. Every new member who joins can find you.
+          </p>
+         </div>
+        </div>
+        <p class="co-not-strip">We are not a delivery app. We are not a review site. We don't take a cut of your revenue. We are a community of people who genuinely want independent cafés to do well.</p>
+       </div>
 
-                <!-- Built with café owners -->
-                <div class="content-block">
-                  <div style="background-color: #1A1A1A; border-radius: 12px; padding: 32px; display: flex; justify-content: space-around; text-align: center; margin: 40px 0; flex-wrap: wrap; gap: 24px;">
-                    <div>
-                      <p style="font-size: 2rem; font-weight: 700; color: #C8956C; margin: 0;">40+</p>
-                      <p style="font-size: 0.85rem; color: #CCCCCC; margin: 8px 0 0 0;">Community members</p>
-                    </div>
-                    <div>
-                      <p style="font-size: 2rem; font-weight: 700; color: #C8956C; margin: 0;">8+</p>
-                      <p style="font-size: 0.85rem; color: #CCCCCC; margin: 8px 0 0 0;">Cafés on the map</p>
-                    </div>
-                    <div>
-                      <p style="font-size: 2rem; font-weight: 700; color: #C8956C; margin: 0;">100%</p>
-                      <p style="font-size: 0.85rem; color: #CCCCCC; margin: 8px 0 0 0;">Real visits. Real people.</p>
-                    </div>
-                  </div>
-                  <h2 class="section-heading">The community is already active.</h2>
-                  <p>We currently have over 40 members in our Café Hoppers community — actively visiting cafés, sharing recommendations, and helping each other discover independent places worth going to.</p>
-                  <p>Every café on our community map was added by a real member who visited. No scraped listings. No auto-generated content. Every pin has a person and a story behind it.</p>
-                  <p>We are now personally inviting a small number of independent cafés to be featured before the platform launches publicly. The cafés we approach first are the ones our community is already talking about.</p>
-                </div>
+       <!-- IT'S ALREADY HAPPENING -->
+       <div class="content-block">
+        <h2 class="section-heading">It's already happening.</h2>
+        <div class="co-rule"></div>
+        <div class="co-proof-grid">
 
-                <!-- Embedded Form -->
-                <div class="content-block">
-                    <h2 class="section-heading">Get featured first.</h2>
-                    <p class="form-intro">We reach out personally to cafés our community is already recommending. If you'd like to be considered, leave your details below and we'll be in touch — no commitment required.</p>
-                    <div class="form-wrapper">
-                        <!-- Placeholder Airtable or Tally form embed - Replace with your actual form URL -->
-                        <iframe class="airtable-embed" src="https://airtable.com/embed/appKcNz12NgSHtZrI/pagr8fkTCCWViAk9T/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
+         <div class="co-proof-card">
+          <img src="assets/images/the-station-run.jpg"
+               alt="Café Run at The Station, Sheung Wan"
+               loading="lazy">
+          <div class="co-proof-body">
+           <p class="co-proof-label">Gathering #1 — May 10</p>
+           <p class="co-proof-title">Café Run · The Station</p>
+           <p class="co-proof-text">Adrian runs The Station in Sheung Wan. He invited the community for a morning harbour run and coffee. People came on a Sunday — because one person recommended it.</p>
+          </div>
+         </div>
+
+         <div class="co-proof-card">
+          <img src="assets/images/milligrammeetup.jpg"
+               alt="Meetup at Milligram Coffee, Central"
+               loading="lazy">
+          <div class="co-proof-body">
+           <p class="co-proof-label">Gathering #2 — May 23</p>
+           <p class="co-proof-title">Trying Michael's Pick · Milligram Coffee</p>
+           <p class="co-proof-text">Michael recommended Milligram in Central. Members showed up to try his pick. Charcoal lattes, canelés fresh from the oven, two hours of conversation. No activity planned.</p>
+          </div>
+         </div>
+
+        </div>
+        <p style="font-family:Inter,sans-serif; font-size:0.95rem; color:#555; margin:8px 0 16px;">Real visits. Real people. All from word-of-mouth.</p>
+        <a href="cafe-hoppers.html" class="co-see-link">See who's recommending cafés right now →</a>
+       </div>
+
+       <!-- STATS -->
+       <div class="content-block">
+        <div class="co-stats">
+         <div class="co-stat">
+          <div class="co-stat-num">51</div>
+          <div class="co-stat-label">Community members</div>
+         </div>
+         <div class="co-stat">
+          <div class="co-stat-num">24</div>
+          <div class="co-stat-label">Cafés on the map</div>
+         </div>
+        </div>
+       </div>
+
+       <!-- CTA -->
+       <div class="content-block">
+        <div class="co-cta">
+         <h2>Want the community<br>to try your café?</h2>
+         <p>If you're proud of what you brew, we'd love to hear from you.</p>
+         <a href="https://wa.me/85290971973?text=Hi%2C%20I%20run%20an%20independent%20caf%C3%A9%20in%20Hong%20Kong%20%E2%80%94%20would%20love%20to%20host%20the%20Caf%C3%A9%20Hoppers%20community!"
+            target="_blank"
+            class="co-wa-btn">
+          Message us on WhatsApp
+         </a>
+        </div>
+       </div>
+
+      </div>
+     </section>
     </main>
 
-    <!-- Footer - Same on all pages -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">

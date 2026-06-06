@@ -12,23 +12,283 @@ gtag('config', 'G-WK983SLBZX');
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nodebase Hub | Cafe Owners</title>
+    <title>Nodebase Hub | 咖啡店主</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-    @media (min-width: 600px) {
-      br.desktop-break {
-        display: block;
-      }
+    /* ── PAGE-LEVEL OVERRIDES ── */
+    .page-cafe-owners .section-heading {
+        margin-top: 0;
+        margin-bottom: 1.25rem;
     }
-    @media (max-width: 599px) {
-      br.desktop-break {
-        display: none;
-      }
+    .page-cafe-owners .content-block {
+        margin-bottom: 4rem;
+    }
+
+    /* ── SECTION RULE ── */
+    .co-rule {
+        width: 48px;
+        height: 3px;
+        background-color: #C8956C;
+        border-radius: 2px;
+        margin: 0 0 24px 0;
+    }
+
+    /* ── HERO ── */
+    .co-hero {
+        background-color: #F5F0E8;
+        padding: 64px 24px 56px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .co-hero h1 {
+        max-width: 680px;
+        margin: 0 auto 16px;
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: #1A1A1A;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+        font-family: Georgia, serif;
+    }
+    .co-hero p {
+        max-width: 520px;
+        margin: 0 auto;
+        font-size: 1.125rem;
+        color: #4A4A4A;
+        line-height: 1.75;
+        font-family: Inter, sans-serif;
+    }
+
+    /* ── HOW IT WORKS FLOW ── */
+    .co-flow-box {
+        background-color: #F7F4F0;
+        border-radius: 12px;
+        padding: 22px 28px;
+        margin: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 0;
+        align-items: center;
+    }
+    .co-flow-step {
+        font-family: Inter, sans-serif;
+        font-weight: 600;
+        font-size: 0.93rem;
+        color: #2A2A2A;
+        margin-right: 10px;
+    }
+    .co-flow-arrow {
+        color: #C8956C;
+        font-weight: 700;
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+    .co-no-commission {
+        font-family: Inter, sans-serif;
+        font-size: 0.93rem;
+        color: #5A5A5A;
+        margin-top: 4px;
+    }
+
+    /* ── CALLOUT ITEMS ── */
+    .co-callouts {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 20px 0 24px;
+    }
+    .co-callout {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        padding: 16px 18px;
+        background: #F8F7F4;
+        border-radius: 10px;
+        border-left: 3px solid #C9A962;
+    }
+    .co-callout-text {
+        font-family: Inter, sans-serif;
+        font-size: 0.97rem;
+        color: #2A2A2A;
+        line-height: 1.6;
+        margin: 0;
+    }
+    .co-callout-text strong {
+        display: block;
+        font-weight: 600;
+        color: #1A1A1A;
+        margin-bottom: 2px;
+    }
+    .co-not-strip {
+        background: transparent;
+        border: 1px solid #E0DBD4;
+        border-radius: 8px;
+        padding: 14px 18px;
+        margin-top: 8px;
+        font-family: Inter, sans-serif;
+        font-size: 0.88rem;
+        color: #777;
+        line-height: 1.7;
+    }
+
+    /* ── PROOF CARDS ── */
+    .co-proof-grid {
+        display: flex;
+        gap: 16px;
+        margin: 20px 0 12px;
+        flex-wrap: wrap;
+    }
+    .co-proof-card {
+        flex: 1;
+        min-width: 260px;
+        background: #F8F7F4;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid #E0DBD4;
+        transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .co-proof-card:hover {
+        box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+        transform: translateY(-2px);
+    }
+    .co-proof-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+    .co-proof-body {
+        padding: 20px 22px 22px;
+    }
+    .co-proof-label {
+        font-family: Inter, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        color: #C9A962;
+        margin: 0 0 6px;
+    }
+    .co-proof-title {
+        font-family: Georgia, serif;
+        font-size: 17px;
+        font-weight: 700;
+        color: #1A1A1A;
+        margin: 0 0 10px;
+        line-height: 1.3;
+    }
+    .co-proof-text {
+        font-family: Inter, sans-serif;
+        font-size: 0.875rem;
+        color: #444;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    /* ── STATS BAR ── */
+    .co-stats {
+        background-color: #1A1A1A;
+        border-radius: 14px;
+        padding: 40px 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        margin: 32px 0;
+        flex-wrap: wrap;
+    }
+    .co-stat {
+        flex: 1;
+        min-width: 160px;
+        text-align: center;
+        padding: 0 24px;
+    }
+    .co-stat + .co-stat {
+        border-left: 1px solid #333;
+    }
+    .co-stat-num {
+        font-family: Georgia, serif;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #C8956C;
+        margin: 0;
+        line-height: 1;
+        letter-spacing: -0.02em;
+    }
+    .co-stat-label {
+        font-family: Inter, sans-serif;
+        font-size: 0.8rem;
+        color: #AAAAAA;
+        margin: 10px 0 0;
+        letter-spacing: 0.3px;
+    }
+
+    /* ── CTA ── */
+    .co-cta {
+        background-color: #F5F0E8;
+        border-radius: 16px;
+        padding: 56px 32px;
+        text-align: center;
+        margin: 20px 0 40px;
+    }
+    .co-cta h2 {
+        font-family: Georgia, serif;
+        font-size: 1.85rem;
+        font-weight: 700;
+        color: #1A1A1A;
+        margin: 0 0 14px;
+        letter-spacing: -0.02em;
+        line-height: 1.3;
+    }
+    .co-cta p {
+        font-family: Inter, sans-serif;
+        font-size: 1rem;
+        color: #4A4A4A;
+        max-width: 400px;
+        margin: 0 auto 28px;
+        line-height: 1.7;
+    }
+    .co-wa-btn {
+        display: inline-block;
+        background-color: #25D366;
+        color: #ffffff;
+        font-family: Inter, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 15px 36px;
+        border-radius: 50px;
+        text-decoration: none;
+        letter-spacing: 0.2px;
+        box-shadow: 0 4px 16px rgba(37,211,102,0.38);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .co-wa-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(37,211,102,0.45);
+    }
+    .co-see-link {
+        font-family: Inter, sans-serif;
+        color: #C9A962;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+    .co-see-link:hover { color: #B8984F; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 640px) {
+        .co-hero h1 { font-size: 1.85rem; }
+        .co-stat + .co-stat { border-left: none; border-top: 1px solid #333; padding-top: 24px; }
+        .co-stats { gap: 16px; }
+        .co-cta { padding: 40px 20px; }
+        .co-cta h2 { font-size: 1.5rem; }
     }
     </style>
 </head>
 <body class="page-cafe-owners">
-    <!-- Header Navigation - Same on all pages -->
+
+    <!-- Header Navigation -->
     <header class="header">
         <div class="container">
             <div class="nav-wrapper">
@@ -46,116 +306,140 @@ gtag('config', 'G-WK983SLBZX');
                     <a href="cafe-owners-zh.html" class="nav-link primary-path active">咖啡店主</a>
                     <a href="contact-zh.html" class="nav-link">聯絡我們</a>
                     <div class="lang-toggle">
-                        <a href="cafe-owners.html" style="font-weight: 400; color: #999999;">EN</a> | <a href="cafe-owners-zh.html" style="font-weight: 700; color: #1A1A1A;">繁</a>
+                        <a href="cafe-owners.html" style="font-weight:400; color:#999999;">EN</a> | <a href="cafe-owners-zh.html" style="font-weight:700; color:#1A1A1A;">繁</a>
                     </div>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="main">
-        <section class="page-section">
-            <div class="container container-content">
-                <div style="background-color: #F5F0E8; padding: 60px 24px 48px 24px; text-align: center; margin-bottom: 40px;">
-                  <h1 class="page-heading" style="text-align: center; max-width: 720px; margin-left: auto; margin-right: auto;">你的下一位識貨客人，<br class="desktop-break">已經在尋找你。</h1>
-                  <p class="lead-text" style="text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">Nodebase 連結香港獨立咖啡店與一個不斷成長的咖啡探店社群——這群人靠真實口碑發現好店，而非依賴演算法。</p>
-                </div>
+     <section class="page-section">
+      <div class="container container-content">
 
-                <div class="content-block">
-                  <h2 class="section-heading">社群如何為你帶來客人</h2>
-                  <p>社群成員到訪你的咖啡店，將體驗分享回群組。其他成員看到真實的人給出真實的推薦，然後親自來找你。</p>
-                  <div style="background-color: #F7F4F0; border-radius: 12px; padding: 24px 32px; margin: 24px 0; font-size: 0.95rem; color: #3A3A3A; line-height: 2;">
-                    <span style="font-weight: 600;">社群成員推薦你的咖啡店</span>
-                    <span style="color: #C8956C; font-weight: 700; margin: 0 12px;">　→　</span>
-                    <span style="font-weight: 600;">探店者親身到訪</span>
-                    <span style="color: #C8956C; font-weight: 700; margin: 0 12px;">　→　</span>
-                    <span style="font-weight: 600;">真實體驗被分享</span>
-                    <span style="color: #C8956C; font-weight: 700; margin: 0 12px;">　→　</span>
-                    <span style="font-weight: 600;">更多探店者發現你</span>
-                  </div>
-                  <p>這就是社群驅動的發現機制。無需付費排名。不抽取佣金。不靠演算法決定你今天是否出現。</p>
-                </div>
-                
-                <!-- Benefits Explanation -->
-                <div class="content-block">
-                  <p class="lead-text">在香港經營一間獨立咖啡店，靠的從來不只是一杯好咖啡。</p>
-                  <p>外賣平台抽成持續上升，利潤空間不斷收窄。而那些真正欣賞你、為手藝而來、而非為折扣而來的客人——難以觸及，更難以留住。</p>
-                  <p>外賣平台給你的是交易。給不了你的，是關係。</p>
-                </div>
+       <!-- HERO -->
+       <div class="co-hero">
+        <h1>你的下一位識貨客人，<br>已經在尋找你。</h1>
+        <p>一個不斷成長的香港咖啡探店社群，靠真實口碑發現獨立咖啡好店。</p>
+       </div>
 
-                <!-- Where Nodebase fits -->
-                <div class="content-block">
-                  <h2 class="section-heading">Nodebase 的定位</h2>
-                  <p>Nodebase 是一個以社群為本的咖啡店探索平台，專為香港獨立咖啡店而建。我們不是外賣平台。我們不是評分網站。我們不是另一個從你收入中分一杯羹的中間人。</p>
-                  <p>我們正在建立一個由主動尋找獨立咖啡店的人組成的社群——他們互相分享發現，互相信任推薦。他們來，是因為真實的人真心推薦了你。他們會再來。</p>
-                  <p>對你的咖啡店而言，這意味著：</p>
-                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;">
-                    <div style="background: #F7F4F0; border-radius: 10px; padding: 20px 24px;">
-                      <p style="margin: 0; font-size: 0.95rem; color: #3A3A3A;">來自真正在找你這類咖啡店的人的自然發現</p>
-                    </div>
-                    <div style="background: #F7F4F0; border-radius: 10px; padding: 20px 24px;">
-                      <p style="margin: 0; font-size: 0.95rem; color: #3A3A3A;">口碑傳播，覆蓋範圍超越你所在的街區</p>
-                    </div>
-                    <div style="background: #F7F4F0; border-radius: 10px; padding: 20px 24px;">
-                      <p style="margin: 0; font-size: 0.95rem; color: #3A3A3A;">與真正關心獨立咖啡店的客人建立直接關係</p>
-                    </div>
-                    <div style="background: #F7F4F0; border-radius: 10px; padding: 20px 24px;">
-                      <p style="margin: 0; font-size: 0.95rem; color: #3A3A3A;">不依賴廣告投放或平台排名的曝光機會</p>
-                    </div>
-                  </div>
-                  <style>
-                  @media (max-width: 600px) {
-                    .benefit-grid { grid-template-columns: 1fr !important; }
-                  }
-                  </style>
-                  <p>Nodebase 與你現有的經營方式並行運作。它建立的是外賣平台永遠做不到的一層：一個真心希望獨立咖啡店興旺的真實社群。</p>
-                </div>
+       <!-- HOW IT WORKS -->
+       <div class="content-block" style="margin-top:3rem;">
+        <h2 class="section-heading">點樣運作</h2>
+        <div class="co-rule"></div>
+        <p>社群成員到訪你的咖啡店，分享返群組。其他成員睇到真人真心推薦，然後親自嚟搵你。</p>
+        <div class="co-flow-box">
+         <span class="co-flow-step">社群成員推薦你的咖啡店</span>
+         <span class="co-flow-arrow">→</span>
+         <span class="co-flow-step">探店者親身到訪</span>
+         <span class="co-flow-arrow">→</span>
+         <span class="co-flow-step">真實體驗被分享</span>
+         <span class="co-flow-arrow">→</span>
+         <span class="co-flow-step" style="margin-right:0;">更多探店者發現你</span>
+        </div>
+        <p class="co-no-commission">無需付費排名。不抽佣金。不靠演算法。</p>
+       </div>
 
-                <!-- Built with café owners -->
-                <div class="content-block">
-                  <div style="background-color: #1A1A1A; border-radius: 12px; padding: 32px; display: flex; justify-content: space-around; text-align: center; margin: 40px 0; flex-wrap: wrap; gap: 24px;">
-                    <div>
-                      <p style="font-size: 2rem; font-weight: 700; color: #C8956C; margin: 0;">40+</p>
-                      <p style="font-size: 0.85rem; color: #CCCCCC; margin: 8px 0 0 0;">社群成員</p>
-                    </div>
-                    <div>
-                      <p style="font-size: 2rem; font-weight: 700; color: #C8956C; margin: 0;">8+</p>
-                      <p style="font-size: 0.85rem; color: #CCCCCC; margin: 8px 0 0 0;">地圖上的咖啡店</p>
-                    </div>
-                    <div>
-                      <p style="font-size: 2rem; font-weight: 700; color: #C8956C; margin: 0;">100%</p>
-                      <p style="font-size: 0.85rem; color: #CCCCCC; margin: 8px 0 0 0;">真實到訪。真實的人。</p>
-                    </div>
-                  </div>
-                  <h2 class="section-heading">社群已經在運作。</h2>
-                  <p>我們的咖啡探店社群目前已有超過 40 位成員，持續到訪咖啡店、分享推薦、互相發掘值得一去的獨立好店。</p>
-                  <p>社群地圖上的每一個標記，都來自親身到訪的真實成員。沒有自動抓取的資料。沒有系統生成的內容。每一個標記背後，都有一個人和一段真實的體驗。</p>
-                  <p>我們現正親身邀請少數獨立咖啡店，在平台公開上線前率先亮相。我們首先接觸的，正是社群成員已經在討論的咖啡店。</p>
-                </div>
+       <!-- WHAT THIS ACTUALLY MEANS -->
+       <div class="content-block">
+        <h2 class="section-heading">對你嘅咖啡店意味著咩</h2>
+        <div class="co-rule"></div>
+        <div class="co-callouts">
+         <div class="co-callout">
+          <p class="co-callout-text">
+           <strong>客人嚟，係因為佢信任嘅人推薦咗你。</strong>
+           唔係演算法畀佢睇到折扣。唔係付費廣告。係真係有人話值得去。
+          </p>
+         </div>
+         <div class="co-callout">
+          <p class="co-callout-text">
+           <strong>你嘅咖啡店出現喺社群地圖，係因為有人去過然後推薦。</strong>
+           每一個標記背後都有一個真實的人。無自動抓取嘅資料。無系統生成嘅內容。
+          </p>
+         </div>
+         <div class="co-callout">
+          <p class="co-callout-text">
+           <strong>唔靠廣告投放或平台排名嘅曝光機會。</strong>
+           社群驅動嘅發現會隨時間複利增長。每一個加入嘅新成員都可以搵到你。
+          </p>
+         </div>
+        </div>
+        <p class="co-not-strip">我哋唔係外賣平台。唔係評分網站。唔會抽你一分一毫。我哋係一群真心希望獨立咖啡店做得好嘅人。</p>
+       </div>
 
-                <!-- Embedded Form -->
-                <div class="content-block">
-                    <h2 class="section-heading">率先加入，被社群發現。</h2>
-                    <p class="form-intro">我們會親身聯絡社群已在推薦的咖啡店。如果你希望被納入考慮，歡迎留下你的資料，我們會主動聯絡你——無需任何承諾。</p>
-                    <div class="form-wrapper">
-                        <!-- Placeholder Airtable or Tally form embed - Replace with your actual form URL -->
-                        <iframe class="airtable-embed" src="https://airtable.com/embed/appKcNz12NgSHtZrI/pagr8fkTCCWViAk9T/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
+       <!-- IT'S ALREADY HAPPENING -->
+       <div class="content-block">
+        <h2 class="section-heading">社群已經在運作。</h2>
+        <div class="co-rule"></div>
+        <div class="co-proof-grid">
+
+         <div class="co-proof-card">
+          <img src="assets/images/the-station-run.jpg"
+               alt="社群咖啡跑 The Station, 上環"
+               loading="lazy">
+          <div class="co-proof-body">
+           <p class="co-proof-label">第一次聚會 — 5月10日</p>
+           <p class="co-proof-title">咖啡跑 · The Station</p>
+           <p class="co-proof-text">Adrian 經營上環 The Station。佢邀請社群一齊晨跑加歎啡。成員喺星期日朝早出現——全因一個人的推薦。</p>
+          </div>
+         </div>
+
+         <div class="co-proof-card">
+          <img src="assets/images/milligrammeetup.jpg"
+               alt="第二次聚會 Milligram Coffee, 中環"
+               loading="lazy">
+          <div class="co-proof-body">
+           <p class="co-proof-label">第二次聚會 — 5月23日</p>
+           <p class="co-proof-title">試嗎麥可精選 · Milligram Coffee</p>
+           <p class="co-proof-text">Michael 推薦咗中環 Milligram Coffee。成員齊嚟試佢嘅推薦。炭焙拿鐵、新鮮出爐可麗露，傾咗兩個鐘。無任何節目安排。</p>
+          </div>
+         </div>
+
+        </div>
+        <p style="font-family:Inter,sans-serif; font-size:0.95rem; color:#555; margin:8px 0 16px;">真實到訪。真實的人。全靠口碑。</p>
+        <a href="cafe-hoppers-zh.html" class="co-see-link">睇吓邊個喺度推薦緊 →</a>
+       </div>
+
+       <!-- STATS -->
+       <div class="content-block">
+        <div class="co-stats">
+         <div class="co-stat">
+          <div class="co-stat-num">51</div>
+          <div class="co-stat-label">位社群成員</div>
+         </div>
+         <div class="co-stat">
+          <div class="co-stat-num">24</div>
+          <div class="co-stat-label">間咖啡店已標記</div>
+         </div>
+        </div>
+       </div>
+
+       <!-- CTA -->
+       <div class="content-block">
+        <div class="co-cta">
+         <h2>想社群嚟試吓<br>你嘅咖啡？</h2>
+         <p>如果你對自己沖嘅嘢有信心，我哋好想聽你講。</p>
+         <a href="https://wa.me/85290971973?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E5%9C%A8%E9%A6%99%E6%B8%AF%E7%B6%93%E7%87%9F%E4%B8%80%E9%96%93%E7%8D%A8%E7%AB%8B%E5%92%96%E5%95%A1%E5%BA%97%E2%80%94%E2%80%94%E5%A5%BD%E6%83%B3%E9%82%80%E8%AB%8B%20Caf%C3%A9%20Hoppers%20%E7%A4%BE%E7%BE%A4%E5%9A%9F%E8%A9%A6%E5%90%93%EF%BC%81"
+            target="_blank"
+            class="co-wa-btn">
+          WhatsApp 聯絡我們
+         </a>
+        </div>
+       </div>
+
+      </div>
+     </section>
     </main>
 
-    <!-- Footer - Same on all pages -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-links">
-                    <a href="index-zh.html">Home</a>
-                    <a href="cafe-hoppers-zh.html">Cafe Hoppers</a>
-                    <a href="cafe-owners-zh.html">Cafe Owners</a>
-                    <a href="contact-zh.html">Contact</a>
+                    <a href="index-zh.html">首頁</a>
+                    <a href="cafe-hoppers-zh.html">咖啡探店</a>
+                    <a href="cafe-owners-zh.html">咖啡店主</a>
+                    <a href="contact-zh.html">聯絡我們</a>
                 </div>
                 <p class="footer-copyright">&copy; 2026 Nodebase. All rights reserved.</p>
                 <a href="privacy.html">Privacy Policy</a>
