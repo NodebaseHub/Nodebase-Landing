@@ -839,11 +839,34 @@ main p {
                             at a time.</p>
                           <div class="curator-footer-row">
                             <span class="curator-territory-pill">HK Island</span>
-                            <span class="curator-pick-count">4 picks</span>
+                            <span class="curator-pick-count">5 picks</span>
                           </div>
                         </div>
                       </div>
                       <div class="curator-cafes">
+                        <div class="curator-cafe-item curator-cafe-item--has-photo"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Africa Coffee & Tea','JT')">
+                          <img src="assets/images/ACT-front.jpg"
+                            class="cafe-item-photo"
+                            alt="Africa Coffee & Tea, Wong Chuk Hang"
+                            loading="lazy">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Africa Coffee & Tea</span>
+                            <span class="cafe-item-location-pill">Wong Chuk Hang</span>
+                          </div>
+                          <p class="cafe-item-quote">"Single-origin pour-overs from
+                            Ethiopia, Uganda, Kenya, and Rwanda — order a few and share.
+                            Cant go wrong with the classic Ethiopian coffee but The
+                            Rwanda's floral beans were the surprise of the table!"</p>
+                          <p class="cafe-item-try">Try: Single-origin pour-over tasting</p>
+                          <a href="https://share.google/y2Nffy23FapCla23R"
+                            target="_blank" class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Africa Coffee & Tea','JT',event)">
+                            Get Directions →
+                          </a>
+                        </div>
                         <div class="curator-cafe-item"
                           onclick="event.stopPropagation();
                             trackCafeClick('Soul Coffee & Matcha by IDFC','JT')">
@@ -1264,23 +1287,34 @@ main p {
                       </a>
                     </div>
                   </div>
-                  <div class="discovery-spotlight">
-                  <div class="discovery-event">
-                    <span class="discovery-event-label">Next
-                      Gathering</span>
-                    <h3 class="discovery-cafe-name">Africa Coffee
-                      & Tea — Wong Chuk Hang</h3>
-                    <p class="discovery-quote">Four single-origin
-                      pours on the table — Ethiopia, Uganda, Kenya,
-                      Rwanda. We'll share a few between us and taste
-                      our way through the continent.</p>
-                    <p class="discovery-event-details">Saturday 20
-                      June, 10:30am. <a href="https://share.google/y2Nffy23FapCla23R"
-                      target="_blank" class="discovery-directions"
-                      onclick="trackDiscoveryClick('Africa Coffee & Tea','next_gathering',event)">
-                      Get Directions →</a></p>
+                  <div class="discovery-past">
+                    <img src="assets/images/20260620_ACT.jpg"
+                         class="discovery-past-photo"
+                         alt="Meetup #3 at Africa Coffee & Tea,
+                              Wong Chuk Hang, 20 June"
+                         loading="lazy">
+                    <div class="discovery-past-body">
+                      <p class="discovery-month-label">Gathering #3
+                        — 20 June</p>
+                      <h3 class="discovery-cafe-name">Trying JT's
+                        Pick · Africa Coffee & Tea</h3>
+                      <p class="discovery-location">📍 Wong Chuk Hang</p>
+                      <p class="discovery-quote">"Four single-origin
+                        pours, four countries — Ethiopia, Uganda, Kenya,
+                        Rwanda. Rwanda's floral notes were the surprise
+                        of the table. African art on the walls, sea views
+                        from the 15th floor, four hours that felt like
+                        one."</p>
+                      <p class="discovery-credit">JT, Yin, Emma, Adrian</p>
+                      <a href="https://share.google/y2Nffy23FapCla23R"
+                         target="_blank"
+                         class="discovery-directions"
+                         onclick="trackDiscoveryClick('Africa Coffee & Tea',
+                           'gathering_3',event)">
+                        Africa Coffee & Tea →
+                      </a>
+                    </div>
                   </div>
-                </div>
                 </div>
               </div>
             </section>

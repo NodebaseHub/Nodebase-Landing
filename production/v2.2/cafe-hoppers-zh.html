@@ -835,11 +835,34 @@ main p {
                           <p class="curator-descriptor">一步一步，建立這張地圖。</p>
                           <div class="curator-footer-row">
                             <span class="curator-territory-pill">香港島</span>
-                            <span class="curator-pick-count">4 個推薦</span>
+                            <span class="curator-pick-count">5 個推薦</span>
                           </div>
                         </div>
                       </div>
                       <div class="curator-cafes">
+                        <div class="curator-cafe-item curator-cafe-item--has-photo"
+                          onclick="event.stopPropagation();
+                            trackCafeClick('Africa Coffee & Tea','JT')">
+                          <img src="assets/images/ACT-front.jpg"
+                            class="cafe-item-photo"
+                            alt="Africa Coffee & Tea, 黃竹坑"
+                            loading="lazy">
+                          <div class="cafe-item-header">
+                            <span class="cafe-item-name">Africa Coffee & Tea</span>
+                            <span class="cafe-item-location-pill">黃竹坑</span>
+                          </div>
+                          <p class="cafe-item-quote">"Single-origin pour-overs from
+                            Ethiopia, Uganda, Kenya, and Rwanda — order a few and share.
+                            Cant go wrong with the classic Ethiopian coffee but The
+                            Rwanda's floral beans were the surprise of the table!"</p>
+                          <p class="cafe-item-try">試試：單一產地手沖品嚐</p>
+                          <a href="https://share.google/y2Nffy23FapCla23R"
+                            target="_blank" class="cafe-item-directions"
+                            onclick="event.stopPropagation();
+                              trackDirectionsClick('Africa Coffee & Tea','JT',event)">
+                            查看地圖 →
+                          </a>
+                        </div>
                         <div class="curator-cafe-item"
                           onclick="event.stopPropagation();
                             trackCafeClick('Soul Coffee & Matcha by IDFC','JT')">
@@ -1259,21 +1282,34 @@ main p {
                       </a>
                     </div>
                   </div>
-                  <div class="discovery-spotlight">
-                  <div class="discovery-event">
-                    <span class="discovery-event-label">下次聚會</span>
-                    <h3 class="discovery-cafe-name">Africa Coffee
-                      & Tea — 黃竹坑</h3>
-                    <p class="discovery-quote">桌上四款單一產地手沖
-                      ——衣索比亞、烏干達、肯尼亞、盧旺達。大家輪流分享
-                      品嚐，一起喝遍整個非洲大陸。</p>
-                    <p class="discovery-event-details">6月20日
-                      （星期六）上午10:30。 <a href="https://share.google/y2Nffy23FapCla23R"
-                      target="_blank" class="discovery-directions"
-                      onclick="trackDiscoveryClick('Africa Coffee & Tea','next_gathering',event)">
-                      查看地圖 →</a></p>
+                  <div class="discovery-past">
+                    <img src="assets/images/20260620_ACT.jpg"
+                         class="discovery-past-photo"
+                         alt="第三次聚會 at Africa Coffee & Tea,
+                              黃竹坑, 20 June"
+                         loading="lazy">
+                    <div class="discovery-past-body">
+                      <p class="discovery-month-label">第三次聚會
+                        — 6月20日</p>
+                      <h3 class="discovery-cafe-name">試嗎JT精選 ·
+                        Africa Coffee & Tea</h3>
+                      <p class="discovery-location">📍 黃竹坑</p>
+                      <p class="discovery-quote">"Four single-origin
+                        pours, four countries — Ethiopia, Uganda, Kenya,
+                        Rwanda. Rwanda's floral notes were the surprise
+                        of the table. African art on the walls, sea views
+                        from the 15th floor, four hours that felt like
+                        one."</p>
+                      <p class="discovery-credit">JT, Yin, Emma, Adrian</p>
+                      <a href="https://share.google/y2Nffy23FapCla23R"
+                         target="_blank"
+                         class="discovery-directions"
+                         onclick="trackDiscoveryClick('Africa Coffee & Tea',
+                           'gathering_3',event)">
+                        Africa Coffee & Tea →
+                      </a>
+                    </div>
                   </div>
-                </div>
                 </div>
               </div>
             </section>
