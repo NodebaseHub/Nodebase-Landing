@@ -1,0 +1,833 @@
+{
+  "_about": "Single source of truth for curator cards on cafe-hoppers.html and cafe-hoppers-zh.html. Edit here; pages are generated from this file.",
+  "curators": [
+    {
+      "id": "David",
+      "name": "David",
+      "initial": "D",
+      "descriptor": {
+        "en": "Sets a high bar. Arabica purist.",
+        "zh": "標準高。阿拉比卡純粹主義者。"
+      },
+      "territory": {
+        "en": "Sai Ying Pun",
+        "zh": "西營盤"
+      },
+      "picks": [
+        {
+          "id": "Two-and-a-Half Street",
+          "directions_id": "2½",
+          "name": "Two-and-a-Half Street",
+          "location": {
+            "en": "Sai Ying Pun",
+            "zh": "西營盤"
+          },
+          "quote": "\"Many of the staff I know have left but they managed to keep up the vibe.\"",
+          "try": {
+            "en": "Try: Long black, Bacon and Egg Croissant",
+            "zh": "試試：Long black, Bacon and Egg Croissant"
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://share.google/nkqzSJjTDHiq1iXuq"
+        },
+        {
+          "id": "Café Lavande",
+          "directions_id": "Café Lavande",
+          "name": "Café Lavande",
+          "location": {
+            "en": "Hong Kong",
+            "zh": "香港"
+          },
+          "quote": "\"This place has more Italian style coffee. Also, nice and quiet.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://share.google/6bMD2GBnbx5Qn1BzI"
+        },
+        {
+          "id": "Halfway Coffee Sheung Wan",
+          "directions_id": "Halfway Coffee Sheung Wan",
+          "name": "Halfway Coffee",
+          "location": {
+            "en": "Sheung Wan",
+            "zh": "上環"
+          },
+          "quote": null,
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "pending_quote",
+          "photo": "assets/images/halfway-coffee-sheungwan.jpg",
+          "photo_alt": "Halfway Coffee, Sheung Wan",
+          "maps_url": "https://maps.app.goo.gl/QKvfgJhpCrBdJjc46"
+        },
+        {
+          "id": "Halfway Coffee Mid-Levels",
+          "directions_id": "Halfway Coffee Mid-Levels",
+          "name": "Halfway Coffee",
+          "location": {
+            "en": "Mid-Levels",
+            "zh": "半山"
+          },
+          "quote": "\"Really cool, but will be too hot soon. Great coffee.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": "assets/images/halfway-coffee-midlevels.jpg",
+          "photo_alt": "Halfway Coffee, Mid-Levels",
+          "maps_url": "https://share.google/JVpPm6sso52pSCiz7"
+        },
+        {
+          "id": "Casa Iberica",
+          "directions_id": "Casa Iberica",
+          "name": "Casa Iberica",
+          "location": {
+            "en": null,
+            "zh": null
+          },
+          "quote": "\"Finally got round to trying the coffee and it is good. The tasting ladder is fantastic as well.\"",
+          "try": {
+            "en": "Try: Tasting platter",
+            "zh": "試試：品嚐拼盤"
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://maps.app.goo.gl/ue4jp6qJzhNcwNkc6?g_st=ac"
+        }
+      ]
+    },
+    {
+      "id": "Clarence",
+      "name": "Clarence",
+      "initial": "C",
+      "descriptor": {
+        "en": "Geisha varietal hunter. Oma regular since 2017.",
+        "zh": "鍾情藝妓咖啡。Oma 的老主顧，由2017年開始。"
+      },
+      "territory": {
+        "en": "Tai Hang",
+        "zh": "大坑"
+      },
+      "picks": [
+        {
+          "id": "Oma Specialty Coffee",
+          "directions_id": "Oma Specialty Coffee",
+          "name": "Oma Specialty Coffee",
+          "location": {
+            "en": "Tai Hang",
+            "zh": "大坑"
+          },
+          "quote": "\"Great roastery — Geisha varietals. Top notch. I only really care about the coffee.\"",
+          "try": {
+            "en": "Try: Their espresso",
+            "zh": "試試：Their espresso"
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://share.google/cfRW4tBXXd4j64vGP"
+        },
+        {
+          "id": "Whiskers & Paws",
+          "directions_id": "Whiskers & Paws",
+          "name": "Whiskers & Paws",
+          "location": {
+            "en": "Ap Lei Chau",
+            "zh": "鴨脷洲"
+          },
+          "quote": "\"The coffee shop at Whiskers and Paws in Horizon Plaza, Ap Lei Chau. Less so about the coffee, more so about the doggie vibes.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://share.google/5hUZCo9h78NlOc4xB"
+        }
+      ]
+    },
+    {
+      "id": "Angie",
+      "name": "Angie",
+      "initial": "A",
+      "descriptor": {
+        "en": "Checks for high chairs before she sits down.",
+        "zh": "坐低之前先確認有無 BB椅。"
+      },
+      "territory": {
+        "en": "Sai Wan Ho",
+        "zh": "西灣河"
+      },
+      "picks": [
+        {
+          "id": "Rhino Kitchen",
+          "directions_id": "Rhino Kitchen",
+          "name": "Rhino Kitchen",
+          "location": {
+            "en": "Sai Wan Ho",
+            "zh": "西灣河"
+          },
+          "quote": "\"Good coffee and food. Decent prices vs Central and west. High chairs, outdoor area, pet-friendly.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://share.google/h5dXLJFSip98Gj9uq"
+        }
+      ]
+    },
+    {
+      "id": "Dave",
+      "name": "Dave",
+      "initial": "D",
+      "descriptor": {
+        "en": "Runs before coffee. Kowloon side.",
+        "zh": "先跑步後咖啡。九龍區。"
+      },
+      "territory": {
+        "en": "Sham Shui Po",
+        "zh": "深水埗"
+      },
+      "picks": [
+        {
+          "id": "Layback Matters",
+          "directions_id": "Layback Matters",
+          "name": "Layback Matters",
+          "location": {
+            "en": "Sham Shui Po",
+            "zh": "深水埗"
+          },
+          "quote": "\"A particularly interesting one is Layback Matters. They let you decide how much you want to pay for your coffee. Yes it is true! And they've got a friendly cat — she climbed to my lap and stayed the whole time. ☕\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": "assets/images/dave-at-laybackmatters.jpg",
+          "photo_alt": "Layback Matters, Sham Shui Po",
+          "maps_url": "https://share.google/3BfAyepbwvwDDV1iA"
+        }
+      ]
+    },
+    {
+      "id": "Michael",
+      "name": "Michael",
+      "initial": "M",
+      "descriptor": {
+        "en": "Extraction-focused. Finds the quiet gems in Central.",
+        "zh": "專注萃取。 發掘中環隱世小店。"
+      },
+      "territory": {
+        "en": "Central",
+        "zh": "中環"
+      },
+      "picks": [
+        {
+          "id": "Milligram Coffee",
+          "directions_id": "Milligram Coffee",
+          "name": "Milligram Coffee",
+          "location": {
+            "en": "Central",
+            "zh": "中環"
+          },
+          "quote": "\"Well-prepped espresso, good extraction, well balanced, and great Japanese style decor inside. Great little escape in Central.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://maps.app.goo.gl/GtfwgcfWUtbozhd97"
+        }
+      ]
+    },
+    {
+      "id": "Sharon",
+      "name": "Sharon",
+      "initial": "S",
+      "descriptor": {
+        "en": "First through the door on opening day. Champions local businesses.",
+        "zh": "開幕當天第一個到場。 支持本地小店。"
+      },
+      "territory": {
+        "en": "Happy Valley",
+        "zh": "跑馬地"
+      },
+      "picks": [
+        {
+          "id": "Joymore",
+          "directions_id": "Joymore",
+          "name": "Joymore",
+          "location": {
+            "en": "King Kwong St",
+            "zh": "英皇道"
+          },
+          "quote": "\"Steamed buns with various fillings, chef painted the exterior, extremely friendly. Visited on opening day.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": "assets/images/joymore.jpg",
+          "photo_alt": "Joymore, King Kwong St",
+          "maps_url": "https://share.google/zGKjjweeaWh6yZTy7"
+        },
+        {
+          "id": "HFT Life",
+          "directions_id": "HFT Life",
+          "name": "HFT Life",
+          "location": {
+            "en": "Happy Valley",
+            "zh": "跑馬地"
+          },
+          "quote": "\"It's a nice place to be — quiet and good to create artwork. Health conscious vibe. Coffee and snack combo for $40.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://share.google/3zCoPkusuInICUSGI"
+        }
+      ]
+    },
+    {
+      "id": "Adrian",
+      "name": "Adrian",
+      "initial": "A",
+      "descriptor": {
+        "en": "Runs The Station. Opened the door for group runs.",
+        "zh": "The Station 老闆。 開創了團體跑步活動。"
+      },
+      "territory": {
+        "en": "Sheung Wan",
+        "zh": "上環"
+      },
+      "picks": [
+        {
+          "id": "The Station Café",
+          "directions_id": "The Station Café",
+          "name": "The Station Café",
+          "location": {
+            "en": "Sheung Wan",
+            "zh": "上環"
+          },
+          "quote": "\"Ethiopian × Indonesian blend. Proper specialty. 5% off if you run before coffee.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://share.google/YodkopCWftkj2Y1mj"
+        }
+      ]
+    },
+    {
+      "id": "JT",
+      "name": "JT",
+      "initial": "JT",
+      "descriptor": {
+        "en": "Building the map, one hop at a time.",
+        "zh": "一步一步，建立這張地圖。"
+      },
+      "territory": {
+        "en": "HK Island",
+        "zh": "香港島"
+      },
+      "picks": [
+        {
+          "id": "Africa Coffee & Tea",
+          "directions_id": "Africa Coffee & Tea",
+          "name": "Africa Coffee & Tea",
+          "location": {
+            "en": "Wong Chuk Hang",
+            "zh": "黃竹坑"
+          },
+          "quote": "\"Single-origin pour-overs from Ethiopia, Uganda, Kenya, and Rwanda — order a few and share. Cant go wrong with the classic Ethiopian coffee but The Rwanda's floral beans were the surprise of the table!\"",
+          "try": {
+            "en": "Try: Single-origin pour-over tasting",
+            "zh": "試試：單一產地手沖品嚐"
+          },
+          "status": "live",
+          "photo": "assets/images/ACT-front.jpg",
+          "photo_alt": "Africa Coffee & Tea, Wong Chuk Hang",
+          "maps_url": "https://share.google/y2Nffy23FapCla23R"
+        },
+        {
+          "id": "Soul Coffee & Matcha by IDFC",
+          "directions_id": "Soul Coffee & Matcha by IDFC",
+          "name": "Soul Coffee & Matcha by IDFC",
+          "location": {
+            "en": "Central",
+            "zh": "中環"
+          },
+          "quote": "\"Choices of beans, matcha options, solid wifi for working.\"",
+          "try": {
+            "en": "Try: Piccolo",
+            "zh": "試試：Piccolo"
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://share.google/aa5WcfxbJSOuln8KO"
+        },
+        {
+          "id": "Ninetys Coffee & Roastery",
+          "directions_id": "Ninetys Coffee & Roastery",
+          "name": "Ninetys Coffee & Roastery",
+          "location": {
+            "en": "Central",
+            "zh": "中環"
+          },
+          "quote": "\"Good for brunch and formal meetups, decent table space.\"",
+          "try": {
+            "en": "Try: Biscoff Cheesecake",
+            "zh": "試試：Biscoff Cheesecake"
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://share.google/kQYjNzO6AE1DNcVEk"
+        },
+        {
+          "id": "Liffee Coffee",
+          "directions_id": "Liffee Coffee",
+          "name": "Liffee Coffee",
+          "location": {
+            "en": "Wanchai",
+            "zh": "灣仔"
+          },
+          "quote": "\"Good for brunch. Lunch set Steak & Eggs + Hot Beverage $168 — great value.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": "assets/images/liffee-steak-coffee.jpg",
+          "photo_alt": "Liffee Coffee, Wanchai",
+          "maps_url": "https://share.google/Q0WXTS4MiaovGcIiM"
+        },
+        {
+          "id": "Frenchies Bakery & Coffee",
+          "directions_id": "Frenchies Bakery & Coffee",
+          "name": "Frenchies Bakery & Coffee",
+          "location": {
+            "en": "Central",
+            "zh": "中環"
+          },
+          "quote": "\"Flaky crispy croissants. Convenient to the Escalators.\"",
+          "try": {
+            "en": "Try: Cheese & Ham Croissant, Nutella Cruffin",
+            "zh": "試試：Cheese & Ham Croissant, Nutella Cruffin"
+          },
+          "status": "live",
+          "photo": "assets/images/frenchiescafe.jpg",
+          "photo_alt": "Frenchies Bakery & Coffee, Central",
+          "maps_url": "https://share.google/VhWjsEd4V6jhTwG9W"
+        }
+      ]
+    },
+    {
+      "id": "Gourab",
+      "name": "Gourab",
+      "initial": "G",
+      "descriptor": {
+        "en": "Crosses the harbour for good atmosphere. TST-based.",
+        "zh": "為好氣氛願意過海。 尖沙咀為基地。"
+      },
+      "territory": {
+        "en": "Tsim Sha Tsui",
+        "zh": "尖沙咀"
+      },
+      "picks": [
+        {
+          "id": "Urban Coffee Roasters",
+          "directions_id": "Urban Coffee Roasters",
+          "name": "Urban Coffee Roasters",
+          "location": {
+            "en": "Central",
+            "zh": "中環"
+          },
+          "quote": "\"The ambience is nice, if you are a fan of coffee places in Central not too far from the Mid-Level Escalators.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://maps.app.goo.gl/b46dQfV97nn3AoSs7"
+        }
+      ]
+    },
+    {
+      "id": "Emma",
+      "name": "Emma",
+      "initial": "E",
+      "descriptor": {
+        "en": "Finds hidden gems and experiences. Knows Kwun Tong better than anyone.",
+        "zh": "發掘隱世好去處。 最了解觀塘的人。"
+      },
+      "territory": {
+        "en": "Kwun Tong",
+        "zh": "觀塘"
+      },
+      "picks": [
+        {
+          "id": "The Hunt",
+          "directions_id": "The Hunt",
+          "name": "The Hunt",
+          "location": {
+            "en": "Kwun Tong",
+            "zh": "觀塘"
+          },
+          "quote": "\"My personal favourite.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://share.google/U7ap8m4E7DGn59BWc"
+        },
+        {
+          "id": "H.Coffee & Shop",
+          "directions_id": "H.Coffee & Shop",
+          "name": "H.Coffee & Shop — The Corner",
+          "location": {
+            "en": "Wanchai",
+            "zh": "灣仔"
+          },
+          "quote": "\"Just went to a joint with friends today. Quite impressive. Minimum spend $80 per person — so ideally go for lunch, tea, or dinner.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": "assets/images/cafe-h-coffee.jpeg",
+          "photo_alt": "Inside H.Coffee & Shop, Wanchai",
+          "maps_url": "https://maps.app.goo.gl/7a6Tk8ff56rq16sDA"
+        }
+      ]
+    },
+    {
+      "id": "Jason",
+      "name": "Jason",
+      "initial": "J",
+      "descriptor": {
+        "en": "Local roasters, Wanchai.",
+        "zh": "灣仔本地烘焙愛好者。"
+      },
+      "territory": {
+        "en": "Wanchai",
+        "zh": "灣仔"
+      },
+      "picks": [
+        {
+          "id": "Coco Espresso",
+          "directions_id": "Coco Espresso",
+          "name": "Coco Espresso",
+          "location": {
+            "en": "Wanchai",
+            "zh": "灣仔"
+          },
+          "quote": "\"Really good espresso.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://maps.app.goo.gl/oZdvQSGNe1KLU68Y9"
+        },
+        {
+          "id": "窮撚啡 KLF Coffee",
+          "directions_id": "窮撚啡 KLF Coffee",
+          "name": "窮撚啡 KLF Coffee",
+          "location": {
+            "en": "Wanchai",
+            "zh": "灣仔"
+          },
+          "quote": "\"Really good cold brew.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://maps.app.goo.gl/4eBTwj1FqKfVJtRR6"
+        }
+      ]
+    },
+    {
+      "id": "Nanette",
+      "name": "Nanette",
+      "initial": "N",
+      "descriptor": {
+        "en": "Finds the neighbourhood character. Dog-friendly radar.",
+        "zh": "感受街坊特色。 寵物友善雷達。"
+      },
+      "territory": {
+        "en": "Central",
+        "zh": "中環"
+      },
+      "picks": [
+        {
+          "id": "EN Coffee",
+          "directions_id": "EN Coffee",
+          "name": "EN Coffee",
+          "location": {
+            "en": "Central",
+            "zh": "中環"
+          },
+          "quote": "\"Tried the one in Central. Stop brewing 30 min before closing — so go when you have time. Pricey but worth it. Always busy, dog friendly. Perfect if you want to just disappear for an hour.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://maps.app.goo.gl/WrYNJxq2PNHH7q967"
+        }
+      ]
+    },
+    {
+      "id": "Mel",
+      "name": "Mel",
+      "initial": "M",
+      "descriptor": {
+        "en": "Honest reviewer. Vibe matters as much as the beans.",
+        "zh": "誠實評價。氣氛同咖啡豆 一樣重要。"
+      },
+      "territory": {
+        "en": "Happy Valley",
+        "zh": "跑馬地"
+      },
+      "picks": [
+        {
+          "id": "Fineprint",
+          "directions_id": "Fineprint",
+          "name": "Fineprint",
+          "location": {
+            "en": "Happy Valley",
+            "zh": "跑馬地"
+          },
+          "quote": "\"Coffee is decent, but the vibe is not for me — a bit too loud, and there are little flies from the open kitchen.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": null,
+          "photo_alt": null,
+          "maps_url": "https://share.google/lqYCX43VlZLHxAySC"
+        }
+      ]
+    },
+    {
+      "id": "Min",
+      "name": "Min",
+      "initial": "Mi",
+      "descriptor": {
+        "en": "Seeks out champion brewers. Specialty coffee only.",
+        "zh": "尋訪冠軍咖啡師。精品咖啡不將就。"
+      },
+      "territory": {
+        "en": "Tai Hang",
+        "zh": "大坑"
+      },
+      "picks": [
+        {
+          "id": "SonneCAD Coffee",
+          "directions_id": "SonneCAD Coffee",
+          "name": "SonneCAD Coffee",
+          "location": {
+            "en": "Tai Hang",
+            "zh": "大坑"
+          },
+          "quote": "\"Amazing coffee, roasted, prepared and served by a Q Grader, Coffee Champ. Great place for dates, solo.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": "assets/images/sonnecad-pour.png",
+          "photo_alt": "SonneCAD Coffee, Tai Hang",
+          "maps_url": "https://maps.app.goo.gl/3ujc5mtPWeUZeBoB7"
+        }
+      ]
+    },
+    {
+      "id": "Yin",
+      "name": "Yin",
+      "initial": "Y",
+      "descriptor": {
+        "en": "Global traveller, Lamma local — curates wherever she lands.",
+        "zh": "環球旅人，南丫島為家 — 落地邊度，搜羅邊度。"
+      },
+      "territory": {
+        "en": "Lamma Island",
+        "zh": "南丫島"
+      },
+      "picks": [
+        {
+          "id": "Moonary Coffee",
+          "directions_id": "Moonary Coffee",
+          "name": "Moonary Coffee",
+          "location": {
+            "en": "Central",
+            "zh": "中環"
+          },
+          "quote": "\"I loved the latte, they just went down soo easy. Delicious.\"",
+          "try": {
+            "en": "Try: Latte",
+            "zh": "試試：拿鐵"
+          },
+          "status": "live",
+          "photo": "assets/images/MoonaryIMG-20260708-WA0039.jpg",
+          "photo_alt": "Moonary Coffee, Central",
+          "maps_url": "https://share.google/nxvs313yrG4uEbkto"
+        }
+      ]
+    },
+    {
+      "id": "Jamie",
+      "name": "Jamie",
+      "initial": "Ja",
+      "descriptor": {
+        "en": "Hunts down the best clouds in the city.",
+        "zh": "全城搜尋最正嘅 「雲」。"
+      },
+      "territory": {
+        "en": "Kowloon ↔ HK Island",
+        "zh": "九龍 ↔ 港島"
+      },
+      "picks": [
+        {
+          "id": "Dozy",
+          "directions_id": "Dozy",
+          "name": "Dozy",
+          "location": {
+            "en": "Sham Shui Po",
+            "zh": "深水埗"
+          },
+          "quote": "\"Vibe is super trendy — kind of like Halfway Coffee. Their Apple Pancake with Maple Syrup and Oat stole all our hearts.\"",
+          "try": {
+            "en": "Try: Apple Pancake with Maple Syrup and Oat",
+            "zh": "試試：蘋果班戟配楓糖漿"
+          },
+          "status": "live",
+          "photo": "assets/images/Dozy-Jamie.jpeg",
+          "photo_alt": "Dozy, Sham Shui Po",
+          "maps_url": "https://share.google/gzpJjLrx2YDe8IctX"
+        },
+        {
+          "id": "Kactus Koffee",
+          "directions_id": "Kactus Koffee",
+          "name": "Kactus Koffee",
+          "location": {
+            "en": null,
+            "zh": null
+          },
+          "quote": "\"Their cloud coffee is even more heavenly than their Matcha one.\"",
+          "try": {
+            "en": "Try: Cloud coffee",
+            "zh": "試試：雲朵咖啡"
+          },
+          "status": "live",
+          "photo": "assets/images/KactusCoffee.jpg",
+          "photo_alt": "Kactus Koffee",
+          "maps_url": "https://share.google/HElssQ9aFNJGYMT26"
+        }
+      ]
+    },
+    {
+      "id": "Job",
+      "name": "Job",
+      "initial": "Jo",
+      "descriptor": {
+        "en": "Discerning café hopper — drops in whenever he's back in Hong Kong.",
+        "zh": "講究嘅咖啡探索者 — 返香港嗰陣一定去試。"
+      },
+      "territory": {
+        "en": "Philippines · visits HK",
+        "zh": "菲律賓 · 訪港"
+      },
+      "picks": [
+        {
+          "id": "Nook Coffee",
+          "directions_id": "Nook Coffee",
+          "name": "Nook Coffee",
+          "location": {
+            "en": null,
+            "zh": null
+          },
+          "quote": "\"The serenity and shade pulled me in — the iced honeycomb latte was perfect for a hot weekday morning.\"",
+          "try": {
+            "en": "Try: Iced honeycomb latte",
+            "zh": "試試：蜂巢冰拿鐵"
+          },
+          "status": "live",
+          "photo": "assets/images/NookCoffee-Job.png",
+          "photo_alt": "Nook Coffee",
+          "maps_url": "https://share.google/A0ALsZVI3SU7hVucI"
+        }
+      ]
+    },
+    {
+      "id": "Adrian (Kowloon)",
+      "name": "Adrian",
+      "initial": "A",
+      "descriptor": {
+        "en": "Kowloon-side runner, always with a recommendation ready.",
+        "zh": "九龍區跑手， 隨時有推薦介紹。"
+      },
+      "territory": {
+        "en": "Kowloon",
+        "zh": "九龍"
+      },
+      "picks": [
+        {
+          "id": "Trioo Coffee",
+          "directions_id": "Trioo Coffee",
+          "name": "Trioo Coffee",
+          "location": {
+            "en": null,
+            "zh": null
+          },
+          "quote": "\"It's actually my favourite.\"",
+          "try": {
+            "en": null,
+            "zh": null
+          },
+          "status": "live",
+          "photo": "assets/images/Triooo-adrian.png",
+          "photo_alt": "Trioo Coffee",
+          "maps_url": "https://share.google/SFpf3sKuhvPbADSbD"
+        }
+      ]
+    }
+  ]
+}
